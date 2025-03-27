@@ -1,6 +1,7 @@
 # SOC
 #### AXI方塊圖
-https://github.com/user-attachments/assets/5ad85f1f-b7b2-412c-bebc-ecdfbc2f20fe
+![螢幕擷取畫面 2025-03-27 114751](https://github.com/user-attachments/assets/71c9c6fd-a975-45b5-b4f8-af2568688eb9)
+
 #### software:.c
 https://github.com/austin9328/SOC/blob/main/hw1/hw1.sdk/hw1_sdk/src/helloworld.c
 #### hardware:.vdl
