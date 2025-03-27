@@ -1,0 +1,20 @@
+/*
+ * main.c
+ *
+ *  Created on: 2025年3月22日
+ *      Author: yo
+ */
+#include "xparameters.h"
+#include "xil_io.h"
+
+#define LED_BASE_ADDR XPAR_AXI_GPIO_0_BASEADDR
+
+int main() {
+    while (1) {
+        Xil_Out32(LED_BASE_ADDR, 0x0F);  // 全部 LED 亮
+        for (volatile int i = 0; i < 10000000; i++);  // 延遲
+        Xil_Out32(LED_BASE_ADDR, 0x00);  // 全部 LED 關
+        for (volatile int i = 0; i < 10000000; i++);
+    }
+    return 0;
+}

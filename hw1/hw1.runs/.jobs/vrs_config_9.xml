@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="hw1_BD_my_led_ip_0_0_synth_1" LaunchDir="D:/Documents/Vivado_data/hw1/hw1.runs/hw1_BD_my_led_ip_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hw1_BD_proc_sys_reset_0_1_synth_1" LaunchDir="D:/Documents/Vivado_data/hw1/hw1.runs/hw1_BD_proc_sys_reset_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hw1_BD_processing_system7_0_1_synth_1" LaunchDir="D:/Documents/Vivado_data/hw1/hw1.runs/hw1_BD_processing_system7_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hw1_BD_axi_gpio_0_1_synth_1" LaunchDir="D:/Documents/Vivado_data/hw1/hw1.runs/hw1_BD_axi_gpio_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/Documents/Vivado_data/hw1/hw1.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="hw1_BD_my_led_ip_0_0_synth_1"/>
+		<Parent Id="hw1_BD_proc_sys_reset_0_1_synth_1"/>
+		<Parent Id="hw1_BD_processing_system7_0_1_synth_1"/>
+		<Parent Id="hw1_BD_axi_gpio_0_1_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

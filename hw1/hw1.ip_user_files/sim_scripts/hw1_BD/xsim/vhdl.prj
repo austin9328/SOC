@@ -1,0 +1,7 @@
+vhdl xil_defaultlib  \
+"../../../bd/hw1_BD/ip/hw1_BD_axi_gpio_0_0/sim/hw1_BD_axi_gpio_0_0.vhd" \
+"../../../bd/hw1_BD/ip/hw1_BD_proc_sys_reset_0_0/sim/hw1_BD_proc_sys_reset_0_0.vhd" \
+"../../../bd/hw1_BD/ip/hw1_BD_hw1_0_0/sim/hw1_BD_hw1_0_0.vhd" \
+"../../../bd/hw1_BD/sim/hw1_BD.vhd" \
+
+nosort
