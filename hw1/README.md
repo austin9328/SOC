@@ -1,6 +1,7 @@
 # SOC
 #### AXI方塊圖
-![image](![image](https://github.com/user-attachments/assets/ffbec112-440c-4d70-8d49-d5ddc96c9ec1))
+![螢幕擷取畫面 2025-04-23 145938](https://github.com/user-attachments/assets/c3844298-1d53-4194-9db3-1657733359df)
+
 
 #### software: .c
 [https://github.com/austin9328/SOC/blob/main/hw1/hw1.sdk/hw1_sdk/src/helloworld.c](https://github.com/austin9328/SOC/blob/main/hw1/hw_1/hw_1.sdk/hw1_sdk/src/helloworld.c)
