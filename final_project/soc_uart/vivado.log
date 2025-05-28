@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed May 28 20:35:37 2025
+# Process ID: 26228
+# Current directory: D:/Documents/GitHub/SOC/final_project/soc_uart
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29728 D:\Documents\GitHub\SOC\final_project\soc_uart\soc_uart.xpr
+# Log file: D:/Documents/GitHub/SOC/final_project/soc_uart/vivado.log
+# Journal file: D:/Documents/GitHub/SOC/final_project/soc_uart\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Documents/GitHub/SOC/final_project/soc_uart/soc_uart.xpr
+INFO: [Project 1-313] Project file moved from 'D:/Documents/Vivado_data/soc_uart' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [filemgmt 56-1] IP Repository Path: Directory not found as 'D:/Documents/GitHub/SOC/final_project/ip_repo/myip_1.0'; using path 'D:/Documents/Vivado_data/ip_repo/myip_1.0' instead.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Documents/Vivado_data/ip_repo/myip_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Documents/GitHub/SOC/final_project/ip_repo/uart_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Vivado/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 793.414 ; gain = 174.363
+open_bd_design {D:/Documents/GitHub/SOC/final_project/soc_uart/soc_uart.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding cell -- xilinx.com:ip:system_ila:1.1 - system_ila_0
+Adding cell -- xilinx.com:user:uart:1.0 - uart_0
+Successfully read diagram <design_1> from BD file <D:/Documents/GitHub/SOC/final_project/soc_uart/soc_uart.srcs/sources_1/bd/design_1/design_1.bd>
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed May 28 20:36:11 2025...

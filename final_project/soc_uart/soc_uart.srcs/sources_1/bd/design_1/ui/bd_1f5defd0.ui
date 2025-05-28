@@ -1,0 +1,33 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y 260 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 280 -defaultsOSRD
+preplace port rx_seen -pg 1 -y 120 -defaultsOSRD
+preplace portBus seg -pg 1 -y 100 -defaultsOSRD
+preplace inst uart_0 -pg 1 -lvl 3 -y 130 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -y 480 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 4 -y 380 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 360 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 1 4 390J 250 NJ 250 NJ 250 1260J
+preplace netloc uart_0_debug_busy 1 3 1 1020
+preplace netloc uart_0_debug_rx_data 1 3 1 1060
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 N
+preplace netloc uart_0_rx_seen 1 3 2 1070 120 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 400J 260 NJ 260 NJ 260 1250J
+preplace netloc uart_0_txd 1 1 3 NJ 340 NJ 340 1010
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 1 770
+preplace netloc uart_0_seg 1 3 2 1050J 100 NJ
+preplace netloc axi_gpio_0_gpio2_io_o 1 1 3 NJ 320 750 330 1040
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 -10 520 390 330 760 320 NJ
+preplace netloc uart_0_debug_rx_valid 1 3 1 1030
+levelinfo -pg 1 -30 190 580 890 1160 1280 -top 0 -bot 580
+"
+}
+{
+   "da_axi4_cnt":"3",
+   "da_board_cnt":"2",
+   "da_clkrst_cnt":"1",
+   "da_ps7_cnt":"1"
+}
