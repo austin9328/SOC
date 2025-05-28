@@ -61,9 +61,7 @@
 
 ## 2.3
 - ### block design
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/5ef158e9-f34e-4c9f-b9b7-d7da9d2a8c92" width="400"><br>
-</p>
+![螢幕擷取畫面 2025-05-14 134056](https://github.com/user-attachments/assets/5ef158e9-f34e-4c9f-b9b7-d7da9d2a8c92)
 
 
 
