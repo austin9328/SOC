@@ -83,6 +83,9 @@
 [helloworld.c](https://github.com/austin9328/SOC/blob/main/hw2/hw2/hw2.sdk/hw2_sw/src/helloworld.c)
 
 - ### demo
-    - [https://youtube.com/shorts/2GGQ-b6P8NM?feature=share](https://youtube.com/shorts/2GGQ-b6P8NM?feature=share)
+  - [影片](https://youtube.com/shorts/2GGQ-b6P8NM?feature=share)
+  - ![SDK軟體中斷](https://github.com/user-attachments/assets/df2aa9c6-31dc-4233-ab7f-8b5e79e3e798)
+  - ![btn硬體中斷](https://github.com/user-attachments/assets/f7f7a5b1-fc6e-4f07-b1e4-883138e1c4b5)
+
 
 
