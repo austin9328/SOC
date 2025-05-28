@@ -28,19 +28,19 @@ block design
 ![螢幕擷取畫面 2025-05-14 134056](https://github.com/user-attachments/assets/5ef158e9-f34e-4c9f-b9b7-d7da9d2a8c92)
 
 top_wrapper
-[url](https://github.com/austin9328/SOC/blob/main/hw2/ip_repo/hw2_1.0/hdl/hw2_v1_0.v)
+[hw2_v1_0.v](https://github.com/austin9328/SOC/blob/main/hw2/ip_repo/hw2_1.0/hdl/hw2_v1_0.v)
 
 s00
-[url](https://github.com/austin9328/SOC/blob/main/hw2/ip_repo/hw2_1.0/hdl/hw2_v1_0_S00_AXI.v)
+[hw2_v1_0_S00_AXI.v](https://github.com/austin9328/SOC/blob/main/hw2/ip_repo/hw2_1.0/hdl/hw2_v1_0_S00_AXI.v)
 
 intr
-[url](https://github.com/austin9328/SOC/blob/main/hw2/ip_repo/hw2_1.0/hdl/hw2_v1_0_S_AXI_INTR.v)
+[hw2_v1_0_S_AXI_INTR.v](https://github.com/austin9328/SOC/blob/main/hw2/ip_repo/hw2_1.0/hdl/hw2_v1_0_S_AXI_INTR.v)
 
 rtl
-[url](https://github.com/austin9328/SOC/blob/main/hw2/ip_repo/hw2_1.0/src/hw2_intr.v)
+[hw2_intr.v](https://github.com/austin9328/SOC/blob/main/hw2/ip_repo/hw2_1.0/src/hw2_intr.v)
 
 sdk
-([url](https://github.com/austin9328/SOC/blob/main/hw2/hw2/hw2.sdk/hw2_sw/src/helloworld.c)
+[helloworld.c](https://github.com/austin9328/SOC/blob/main/hw2/hw2/hw2.sdk/hw2_sw/src/helloworld.c)
 
 demo
 [https://youtube.com/shorts/2GGQ-b6P8NM?feature=share](https://youtube.com/shorts/2GGQ-b6P8NM?feature=share)
