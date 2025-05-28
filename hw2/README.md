@@ -18,7 +18,7 @@
 <details>
   <summary>pending register</summary>
   <p align="center">
-    <img src="https://github.com/user-attachments/assets/1a3cab2e-8510-44d6-8b36-d999a5731ac2" width="600">
+    <img src="https://github.com/user-attachments/assets/c2c63e09-3397-42b8-bd5b-843390a50250" width="600">
   </p>
 </details>
 
