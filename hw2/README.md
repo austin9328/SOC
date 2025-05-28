@@ -3,7 +3,7 @@
 <details>
   <summary>IRQ number</summary>
   <p align="center">
-    <img src="https://github.com/user-attachments/assets/9aec32e4-9af0-4976-b065-e883ca39b2a9" width="400">
+    <img src="https://github.com/user-attachments/assets/9aec32e4-9af0-4976-b065-e883ca39b2a9" width="600">
   </p>
 </details>
 
