@@ -1,4 +1,4 @@
-# SOC
+# HW1
 #### AXI方塊圖
 ![螢幕擷取畫面 2025-04-23 145938](https://github.com/user-attachments/assets/c3844298-1d53-4194-9db3-1657733359df)
 
