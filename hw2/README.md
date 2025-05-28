@@ -10,21 +10,21 @@
 <details>
   <summary>IRQ ID port</summary>
   <p align="center">
-    <img src="https://github.com/user-attachments/assets/4ce49dc4-d054-4acf-8ba8-bedf5f8b850f" width="400">
+    <img src="https://github.com/user-attachments/assets/4ce49dc4-d054-4acf-8ba8-bedf5f8b850f" width="600">
   </p>
 </details>
 
 <details>
   <summary>pending register</summary>
   <p align="center">
-    <img src="https://github.com/user-attachments/assets/1a3cab2e-8510-44d6-8b36-d999a5731ac2" width="400">
+    <img src="https://github.com/user-attachments/assets/1a3cab2e-8510-44d6-8b36-d999a5731ac2" width="600">
   </p>
 </details>
 
 <details>
   <summary>disable/mask register</summary>
   <p align="center">
-    <img src="https://github.com/user-attachments/assets/29a7f4a6-1012-4c54-a32d-935f24f6cf87" width="400">
+    <img src="https://github.com/user-attachments/assets/29a7f4a6-1012-4c54-a32d-935f24f6cf87" width="600">
   </p>
 </details>
 
@@ -33,28 +33,28 @@
 <details>
   <summary>pending</summary>
   <p align="center">
-    <img src="https://github.com/user-attachments/assets/bdb851d3-3c4f-47e9-a379-fc31504908c6" width="400">
+    <img src="https://github.com/user-attachments/assets/bdb851d3-3c4f-47e9-a379-fc31504908c6" width="600">
   </p>
 </details>
 
 <details>
   <summary>啟用mask</summary>
   <p align="center">
-    <img src="https://github.com/user-attachments/assets/cc111239-4745-4b10-9bb3-f366e618a30d" width="400">
+    <img src="https://github.com/user-attachments/assets/cc111239-4745-4b10-9bb3-f366e618a30d" width="600">
   </p>
 </details>
 
 <details>
   <summary>IRQ ID 變數名稱</summary>
   <p align="center">
-    <img src="https://github.com/user-attachments/assets/242845fd-3e89-4049-9c10-a63e87437265" width="400">
+    <img src="https://github.com/user-attachments/assets/242845fd-3e89-4049-9c10-a63e87437265" width="600">
   </p>
 </details>
 
 <details>
   <summary>ISR放入IRQ </summary>
   <p align="center">
-    <img src="https://github.com/user-attachments/assets/1153a589-4acd-4e4b-92d0-c3fb6d37b7ab" width="400">
+    <img src="https://github.com/user-attachments/assets/1153a589-4acd-4e4b-92d0-c3fb6d37b7ab" width="600">
   </p>
 </details>
 
