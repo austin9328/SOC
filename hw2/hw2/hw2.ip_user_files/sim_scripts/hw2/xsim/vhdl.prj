@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../hw2.srcs/sources_1/bd/hw2/ip/hw2_rst_ps7_0_50M_0_1/sim/hw2_rst_ps7_0_50M_0.vhd" \
+
+nosort

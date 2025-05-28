@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed May 14 13:39:36 2025
+# Process ID: 25080
+# Current directory: D:/Documents/Vivado_data/hw2/hw2.runs/synth_1
+# Command line: vivado.exe -log hw2_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hw2_wrapper.tcl
+# Log file: D:/Documents/Vivado_data/hw2/hw2.runs/synth_1/hw2_wrapper.vds
+# Journal file: D:/Documents/Vivado_data/hw2/hw2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source hw2_wrapper.tcl -notrace

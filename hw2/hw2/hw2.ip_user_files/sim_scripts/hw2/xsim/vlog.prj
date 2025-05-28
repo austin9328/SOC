@@ -1,0 +1,14 @@
+verilog xil_defaultlib --include "../../../../hw2.srcs/sources_1/bd/hw2/ipshared/ec67/hdl" --include "../../../../hw2.srcs/sources_1/bd/hw2/ipshared/70cf/hdl" --include "../../../../hw2.srcs/sources_1/bd/hw2/ip/hw2_processing_system7_0_0_1" \
+"../../../../hw2.srcs/sources_1/bd/hw2/ip/hw2_processing_system7_0_0_1/sim/hw2_processing_system7_0_0.v" \
+"../../../../hw2.srcs/sources_1/bd/hw2/ipshared/8501/src/hw2_intr.v" \
+"../../../../hw2.srcs/sources_1/bd/hw2/ipshared/8501/hdl/hw2_v1_0_S00_AXI.v" \
+"../../../../hw2.srcs/sources_1/bd/hw2/ipshared/8501/hdl/hw2_v1_0_S_AXI_INTR.v" \
+"../../../../hw2.srcs/sources_1/bd/hw2/ipshared/8501/hdl/hw2_v1_0.v" \
+"../../../../hw2.srcs/sources_1/bd/hw2/ip/hw2_hw2_0_0/sim/hw2_hw2_0_0.v" \
+"../../../../hw2.srcs/sources_1/bd/hw2/ip/hw2_xbar_0_1/sim/hw2_xbar_0.v" \
+"../../../../hw2.srcs/sources_1/bd/hw2/sim/hw2.v" \
+"../../../../hw2.srcs/sources_1/bd/hw2/ip/hw2_auto_pc_0_1/sim/hw2_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
