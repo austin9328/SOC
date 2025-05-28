@@ -84,10 +84,10 @@
 
 - ### demo
   - [影片](https://youtube.com/shorts/2GGQ-b6P8NM?feature=share)  
-  - SDK軟體中斷
+  - SDK軟體中斷  
   ![螢幕擷取畫面 2025-05-28 161302](https://github.com/user-attachments/assets/8e6eebec-a7e2-4feb-bfec-932c4fc13923)
 
-  - btn硬體中斷
+  - btn硬體中斷  
   ![螢幕擷取畫面 2025-05-28 161228](https://github.com/user-attachments/assets/fe53e4ef-8e5e-4ebc-a4af-7b0cb7b86181)
 
 
