@@ -1,4 +1,4 @@
-##### 2.1
+## 2.1
 IRQ numbers
 ![678e6a06-8865-4682-9dee-070d9e0eb883](https://github.com/user-attachments/assets/9aec32e4-9af0-4976-b065-e883ca39b2a9)
 IRQ ID port
@@ -8,7 +8,7 @@ pending register
 disable/mask register
 ![9362e1cf-0eb2-4db4-a73e-6df26faa0593](https://github.com/user-attachments/assets/29a7f4a6-1012-4c54-a32d-935f24f6cf87)
 
-#### 2.2
+## 2.2
 pending
 ![pending](https://github.com/user-attachments/assets/bdb851d3-3c4f-47e9-a379-fc31504908c6)
 
@@ -22,25 +22,25 @@ ISR放入IRQ
 
 ![ISR](https://github.com/user-attachments/assets/1153a589-4acd-4e4b-92d0-c3fb6d37b7ab)
 
-#### 2.3
+## 2.3
 
 block design
 ![螢幕擷取畫面 2025-05-14 134056](https://github.com/user-attachments/assets/5ef158e9-f34e-4c9f-b9b7-d7da9d2a8c92)
 
 top_wrapper
-[url](url)
+[url]([url](https://github.com/austin9328/SOC/blob/main/hw2/ip_repo/hw2_1.0/hdl/hw2_v1_0.v))
 
 s00
-[url](url)
+[url]([url](https://github.com/austin9328/SOC/blob/main/hw2/ip_repo/hw2_1.0/hdl/hw2_v1_0_S00_AXI.v))
 
 intr
-[url](url)
+[url]([url](https://github.com/austin9328/SOC/blob/main/hw2/ip_repo/hw2_1.0/hdl/hw2_v1_0_S_AXI_INTR.v))
 
 rtl
-[url](url)
+[url]([url](https://github.com/austin9328/SOC/blob/main/hw2/ip_repo/hw2_1.0/src/hw2_intr.v))
 
 sdk
-[url](url)
+[url]([url](https://github.com/austin9328/SOC/blob/main/hw2/hw2/hw2.sdk/hw2_sw/src/helloworld.c))
 
 demo
 [https://youtube.com/shorts/2GGQ-b6P8NM?feature=share](https://youtube.com/shorts/2GGQ-b6P8NM?feature=share)
