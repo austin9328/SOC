@@ -1,4 +1,4 @@
-# 乒乓球遊戲並由UART傳輸到樹梅派顯示比分
+# 乒乓球遊戲並由UART傳輸到樹梅派顯示分數
 
 ## 一、Fequirements
 
@@ -62,7 +62,7 @@
 
 ## 二、System analysis (Breakdown)
 
-![break_down](image.png)
+![Breakdown](https://github.com/user-attachments/assets/06b8ffe4-0e7f-408f-9ae1-e7c70232c41d)
 
 ## 三、Design (Architecture)
 
