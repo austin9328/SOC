@@ -1,39 +1,70 @@
+# 乒乓球遊戲並由UART傳輸到樹梅派顯示比分
+
+## 一、Fequirements
+
 ### 1.Functional Requirements
 
 - btn控制動作
 - SDK啟動遊戲
-- UART傳送SDK啟動訊號
-- UART接收遊戲比分回傳SDK Terminal
+- 使用Uart傳輸比分到樹梅派顯示
 - 球的移動以LED顯示
-### 2.Interface
-- 內部
-    - UART IP
-    - 乒乓球 IP
-    - SDK
-- 外部
-    - LED 
-    - btn
 
-### 3.Performance
- - UART IP
+### 2.Interface Requirements
+
+- UART & 乒乓球 IP (internal)
+    - input 
+        - clk
+        - rst
+        - axi bus
+        - btn
+
+    - output
+        - UART tx
+        - led[7:0]
+
+- 樹梅派 (external)
+    - input 
+        - UART rx
+    - output
+        - 顯示分數
+
+
+### 3.Performance Requirements
+
+ - UART & 乒乓球 IP
     - 傳輸速率 115200（鲍率）
     - 資料寬度 8bit
     - 延遲 100ms(暫定)
     - 球速 固定
 
-### 4.Limitation
+### 4.Limitation Requirements
 
-- 乒乓球 IP
-    - 只能處理單一FPGA
-    - 只能以btn做為控制
-    - 以LED做為顯示方式
-- UART IP
-    - 只能處理單一連線
-    - 只能處理單一傳輸速率
-### 5.Verification
+- 由於由LED顯示，所以球體只有簡單的左右移動
+- 只能由btn傳送擊球訊號
+- 無遊戲紀錄存檔功能
+- 僅限單一玩家遊玩
 
-- UART驗證 ：將IP I/O掛上 ILA以確定進出訊號是否正確
+### 5.Verification Requirements
 
-- 乒乓球驗證：將IP I/O掛上 ILA以確定進出訊號是否正確
+- 樹梅派uart驗證 :
+    - 透過電腦傳送uart訊號測試樹梅派是否可以正確接收
 
-- 整合驗證： 確定LED 、SDK Terminal、btn 正常運作
+- UART & 乒乓球IP驗證：
+    - UART :  
+        - 將訊號傳給已驗證過的樹梅派，確定可以接收並資料無誤
+    - 乒乓球:  
+         - 確定收到SDK傳送的start訊號後LED正常閃爍  
+         - 確定按下按鈕後LED停止閃爍
+
+- 整合驗證:  
+    - 透過SDK送出訊號，並在按下btn時，樹梅派可以正確顯示分數
+
+
+## 二、System analysis (Breakdown)
+
+![break_down](image.png)
+
+## 三、Design (Architecture)
+
+
+
