@@ -51,10 +51,12 @@
 
 ## 二、System analysis (Breakdown)
 
-![Breakdown](https://github.com/user-attachments/assets/06b8ffe4-0e7f-408f-9ae1-e7c70232c41d)
+![image](https://github.com/user-attachments/assets/af03921d-a2f3-4471-82a1-16eac5a71ff4)
+
 
 ## 三、Design 
 - Architecture
+![image](https://github.com/user-attachments/assets/4604350d-7460-46f8-884b-cf3eb5260d46)
 
 - API
     - UART & 乒乓球 IP 
