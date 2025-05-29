@@ -63,7 +63,7 @@
         - input 
             - clk
             - rst
-            - axi bus
+            - start
             - btn
 
         - output
