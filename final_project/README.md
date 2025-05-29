@@ -1,4 +1,4 @@
-# 乒乓球遊戲並由UART傳輸到樹梅派顯示分數
+# 乒乓球遊戲並由UART傳輸到樹莓派顯示分數
 
 ## 一、Fequirements
 
@@ -6,28 +6,17 @@
 
 - btn控制動作
 - SDK啟動遊戲
-- 使用Uart傳輸比分到樹梅派顯示
+- 使用Uart傳輸比分到樹莓派顯示
 - 球的移動以LED顯示
 
 ### 2.Interface Requirements
 
-- UART & 乒乓球 IP (internal)
-    - input 
-        - clk
-        - rst
-        - axi bus
-        - btn
+- internal
+    - PS -> PL ==>AXI Lite Bus
 
-    - output
-        - UART tx
-        - led[7:0]
-
-- 樹梅派 (external)
-    - input 
-        - UART rx
-    - output
-        - 顯示分數
-
+- external
+    - FPGA -> 樹莓派 ==> UART
+    - FPGA btn、led ==> GPIO
 
 ### 3.Performance Requirements
 
@@ -46,25 +35,48 @@
 
 ### 5.Verification Requirements
 
-- 樹梅派uart驗證 :
-    - 透過電腦傳送uart訊號測試樹梅派是否可以正確接收
+- 樹莓派uart驗證 :
+    - 透過電腦傳送uart訊號測試樹莓派是否可以正確接收
 
 - UART & 乒乓球IP驗證：
     - UART :  
-        - 將訊號傳給已驗證過的樹梅派，確定可以接收並資料無誤
+        - 將訊號傳給已驗證過的樹莓派，確定可以接收並資料無誤
     - 乒乓球:  
          - 確定收到SDK傳送的start訊號後LED正常閃爍  
          - 確定按下按鈕後LED停止閃爍
 
 - 整合驗證:  
-    - 透過SDK送出訊號，並在按下btn時，樹梅派可以正確顯示分數
+    - 透過SDK送出訊號，並在按下btn時，樹莓派可以正確顯示分數
 
 
 ## 二、System analysis (Breakdown)
 
 ![Breakdown](https://github.com/user-attachments/assets/06b8ffe4-0e7f-408f-9ae1-e7c70232c41d)
 
-## 三、Design (Architecture)
+## 三、Design 
+- Architecture
 
+- API
+    - UART & 乒乓球 IP 
+        - input 
+            - clk
+            - rst
+            - axi bus
+            - btn
+
+        - output
+            - UART tx
+            - led[7:0]
+
+    - 樹莓派 
+        - input 
+            - UART rx
+        - output
+            - 顯示分數
+
+
+## 四、coding 
+
+## 五、Verification
 
 
