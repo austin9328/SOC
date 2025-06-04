@@ -6,29 +6,31 @@
 
 - btn控制動作
 - SDK啟動遊戲
-- 使用Uart傳輸比分到樹莓派顯示
+- 使用UART傳輸比分到樹莓派顯示
 - 球的移動以LED顯示
 
 ### 2.Interface Requirements
 
 - internal
-    - PS -> PL ==>AXI Lite Bus
-
+    - PS -> PL(乒乓球IP) ==>AXI Bus
+    - 乒乓球IP -> UART IP ==>AXI Bus
 - external
-    - FPGA -> 樹莓派 ==> UART
-    - FPGA btn、led ==> GPIO
+    - FPGA(UART IP) -> 樹莓派 ==> UART
+    - FPGA btn、led 
 
 ### 3.Performance Requirements
 
- - UART & 乒乓球 IP
+ - UART IP
     - 傳輸速率 115200（鲍率）
     - 資料寬度 8bit
+
+ - 乒乓球 IP
     - 延遲 100ms(暫定)
     - 球速 固定
 
 ### 4.Limitation Requirements
 
-- 由於由LED顯示，所以球體只有簡單的左右移動
+- 由LED顯示，所以球體只有簡單的左右移動
 - 只能由btn傳送擊球訊號
 - 無遊戲紀錄存檔功能
 - 僅限單一玩家遊玩
@@ -36,9 +38,9 @@
 ### 5.Verification Requirements
 
 - 樹莓派uart驗證 :
-    - 透過電腦傳送uart訊號測試樹莓派是否可以正確接收
-
-- UART & 乒乓球IP驗證：
+    - 透過socat 驗證創建虛擬port做UART通訊驗證GUI是否可以收到UAER訊號
+    - 連接FPGA傳送UART訊號確定2者可以正確通訊
+- IP驗證：
     - UART :  
         - 將訊號傳給已驗證過的樹莓派，確定可以接收並資料無誤
     - 乒乓球:  
@@ -59,16 +61,26 @@
 ![image](https://github.com/user-attachments/assets/4604350d-7460-46f8-884b-cf3eb5260d46)
 
 - API
-    - UART & 乒乓球 IP 
-        - input 
-            - clk
-            - rst
-            - start
-            - btn
+    - PL
+        - 乒乓球 IP
+            - input 
+                - clk
+                - rst
+                - start
+                - btn
+                - AXI Bus
+    
+            - output
+                - led[7:0]
+        - UART IP
+            - input
+               - clk
+               - rst
+               - axi
+               - AXI Bus
 
-        - output
-            - UART tx
-            - led[7:0]
+            - output
+               -UART tx
 
     - 樹莓派 
         - input 
