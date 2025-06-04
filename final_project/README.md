@@ -62,7 +62,8 @@ C111112153 呂騏佑
 
 ## 三、Design 
 - Architecture
-![螢幕擷取畫面 2025-05-29 215028](https://github.com/user-attachments/assets/a6640890-9c6d-4fa9-b112-280d2d4a7413)
+![image](https://github.com/user-attachments/assets/98bab615-2a38-4639-81b1-c8fba47475fc)
+
 
 
 
