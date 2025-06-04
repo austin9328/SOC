@@ -52,7 +52,8 @@ C111112153 呂騏佑
 
 ## 二、System analysis (Breakdown)
 
-![image](https://github.com/user-attachments/assets/5df82b9e-5a5f-4968-ba5e-d4f2a4cff86c)
+![Uploading image.png…]()
+
 
 
 
