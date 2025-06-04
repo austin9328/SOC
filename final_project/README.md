@@ -14,19 +14,16 @@ C111112153 呂騏佑
 ### 2.Interface Requirements
 
 - internal
-    - PS -> PL(乒乓球IP) ==>AXI Bus
-    - 乒乓球IP -> UART IP ==>AXI Bus
+    - PS -> PL(IP) ==>AXI Bus
 - external
     - FPGA(UART IP) -> 樹莓派 ==> UART
     - FPGA btn、led 
 
 ### 3.Performance Requirements
 
- - UART IP
+ - UART & 乒乓球 IP
     - 傳輸速率 115200（鲍率）
     - 資料寬度 8bit
-
- - 乒乓球 IP
     - 延遲 100ms(暫定)
     - 球速 固定
 
@@ -55,13 +52,15 @@ C111112153 呂騏佑
 
 ## 二、System analysis (Breakdown)
 
-![image](https://github.com/user-attachments/assets/a2e645cd-1129-4fac-be04-dc81c19fc0ae)
+![螢幕擷取畫面 2025-05-29 214949](https://github.com/user-attachments/assets/fb4ace25-9c88-47a4-a078-b53cdaf98dbf)
+
 
 
 
 ## 三、Design 
 - Architecture
-![image](https://github.com/user-attachments/assets/44ae67ac-d495-4c0e-8cff-335f0e9e9863)
+![螢幕擷取畫面 2025-05-29 215028](https://github.com/user-attachments/assets/a6640890-9c6d-4fa9-b112-280d2d4a7413)
+
 
 
 - API
