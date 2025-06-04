@@ -53,12 +53,14 @@
 
 ## 二、System analysis (Breakdown)
 
-![image](https://github.com/user-attachments/assets/af03921d-a2f3-4471-82a1-16eac5a71ff4)
+![image](https://github.com/user-attachments/assets/a2e645cd-1129-4fac-be04-dc81c19fc0ae)
+
 
 
 ## 三、Design 
 - Architecture
-![image](https://github.com/user-attachments/assets/4604350d-7460-46f8-884b-cf3eb5260d46)
+![image](https://github.com/user-attachments/assets/44ae67ac-d495-4c0e-8cff-335f0e9e9863)
+
 
 - API
     - PL
