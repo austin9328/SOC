@@ -69,7 +69,7 @@ C111112153 呂騏佑
 
 - API
     - PL
-        - 乒乓球 IP
+        - UART & 乒乓球 IP
             - input 
                 - clk
                 - rst
@@ -79,15 +79,7 @@ C111112153 呂騏佑
     
             - output
                 - led[7:0]
-        - UART IP
-            - input
-               - clk
-               - rst
-               - axi
-               - AXI Bus
-
-            - output
-               -UART tx
+                - UART tx
 
     - 樹莓派 
         - input 
