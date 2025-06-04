@@ -1,5 +1,7 @@
 # 乒乓球遊戲並由UART傳輸到樹莓派顯示分數
-
+#### 組員
+C111112131 詹逸宏  
+C111112153 呂騏佑
 ## 一、Fequirements
 
 ### 1.Functional Requirements
