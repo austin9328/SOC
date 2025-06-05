@@ -2,24 +2,25 @@ import numpy as np
 import librosa
 import matplotlib.pyplot as plt
 
-def audio_to_binary(filepath, threshold_ratio=0.3, downsample_factor=100):
-    # 使用 librosa 載入任何音訊格式
+
+def audio_to_binary(filepath, threshold_ratio=0.1):
+    # 載入音訊（自動抓取取樣率 sr）
     y, sr = librosa.load(filepath, sr=None, mono=True)
 
-    # 正規化
+    # 正規化音訊到 -1 ~ 1
     y = y / np.max(np.abs(y))
 
-    # 降取樣（減少資料量）
-    y = y[::downsample_factor]
+    # 每秒取一個點：每隔 sr 個 sample 抓一個
+    y_downsampled = y[::sr]
 
-    # 設定門檻值，轉成 0 / 1
-    threshold = threshold_ratio
-    binary_seq = np.where(np.abs(y) > threshold, 1, 0)
-    print(len(binary_seq))
+    # 設定門檻並轉換為 0 / 1
+    binary_seq = np.where(np.abs(y_downsampled) > threshold_ratio, 1, 0)
+
     return binary_seq
 
+
 if __name__ == "__main__":
-    filepath = "test_music.m4a"
+    filepath = "HAPPY Birthday Song, Happy Birthday to You (8QF9hM1MQwc).mp3"
     
     bin_seq = audio_to_binary(filepath)
 
