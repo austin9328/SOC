@@ -28,17 +28,27 @@ class UARTReaderGUI:
         self.disconnect_btn = tk.Button(root, text="Disconnect", command=self.disconnect, state=tk.DISABLED)
         self.disconnect_btn.grid(row=2, column=1, pady=5)
 
-        # 顯示區
-        self.output = scrolledtext.ScrolledText(root, width=50, height=15)
+        # 接收訊號顯示
+        self.output = scrolledtext.ScrolledText(root, width=50, height=8)
         self.output.grid(row=3, column=0, columnspan=2, pady=10)
 
-        # ===== 新增：輸入資料並傳送 =====
+        # ===== 輸入資料並傳送 =====
         tk.Label(root, text="Send Data (e.g. 1010):").grid(row=4, column=0, sticky="w")
         self.send_entry = tk.Entry(root, width=20)
         self.send_entry.grid(row=4, column=1, sticky="w")
 
         self.send_btn = tk.Button(root, text="Send", command=self.send_to_uart, state=tk.DISABLED)
         self.send_btn.grid(row=5, column=0, columnspan=2, pady=5)
+
+        # ===== 新增遊戲畫面區 =====
+        self.canvas = tk.Canvas(root, width=500, height=200, bg="black")
+        self.canvas.grid(row=6, column=0, columnspan=2, pady=5)
+        self.note = None  # 存放目前畫的圓形
+
+        # 分數顯示
+        self.score = 0
+        self.score_label = tk.Label(root, text="Score: 0", font=("Arial", 14), fg="green")
+        self.score_label.grid(row=7, column=0, columnspan=2, pady=10)
 
     def connect(self):
         port = self.port_entry.get()
@@ -72,6 +82,8 @@ class UARTReaderGUI:
                     if line:
                         self.output.insert(tk.END, f"[RX] {line}\n")
                         self.output.see(tk.END)
+                        self.display_note(line)
+
             except Exception as e:
                 self.output.insert(tk.END, f"[Error] {e}\n")
                 break
@@ -88,6 +100,21 @@ class UARTReaderGUI:
                 self.output.see(tk.END)
         except Exception as e:
             self.output.insert(tk.END, f"[Send Error] {e}\n")
+
+    def display_note(self, signal):
+        if signal == "1":
+            if self.note is None:
+                self.note = self.canvas.create_oval(80, 30, 120, 70, fill="red")
+        elif signal == "0":
+            if self.note is not None:
+                self.canvas.delete(self.note)
+                self.note = None
+        elif signal == "2":
+            self.score += 1
+            self.score_label.config(text=f"Score: {self.score}")
+
+
+
 
 
 if __name__ == "__main__":
