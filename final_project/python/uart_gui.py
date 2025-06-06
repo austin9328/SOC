@@ -90,11 +90,7 @@ class UARTReaderGUI:
                     line = raw_line.decode(errors='ignore').strip()
 
                     if line == "start":
-                        filepath = self.audio_path_entry.get().strip()
                         try:
-                            binary_data = audio_to_binary(filepath)
-                            self.output.insert(tk.END, f"[Sending {len(binary_data)} bits from '{filepath}']...\n")
-                            self.output.see(tk.END)
                             threading.Thread(target=self.send_audio_binary, daemon=True).start()
                         except Exception as e:
                             self.output.insert(tk.END, f"[Error loading audio: {e}]\n")
@@ -103,7 +99,7 @@ class UARTReaderGUI:
                     else:
                         self.output.insert(tk.END, f"[RX] {line}\n")
                         self.output.see(tk.END)
-                        self.display_note(line)
+                        #self.display_note(line)
 
             except Exception as e:
                 self.output.insert(tk.END, f"[Error] {e}\n")
@@ -136,7 +132,7 @@ class UARTReaderGUI:
             self.score_label.config(text=f"Score: {self.score}")
 
     def send_audio_binary(self):
-        filepath = "HAPPY Birthday Song, Happy Birthday to You (8QF9hM1MQwc).mp3"  # 音檔路徑可依需求修改
+        filepath = self.audio_path_entry.get().strip() # 音檔路徑可依需求修改
         binary_data = audio_to_binary(filepath)
         self.output.insert(tk.END, f"[Sending {len(binary_data)} bits from audio]...\n")
         self.output.see(tk.END)
@@ -149,6 +145,8 @@ class UARTReaderGUI:
                 self.serial_port.write(b'\n')
                 self.output.insert(tk.END, f"[TX]{bit}\n")
                 self.output.see(tk.END)
+
+                self.display_note(str(int(bit)))
                 time.sleep(1)  # 控制傳送速度
             except Exception as e:
                 self.output.insert(tk.END, f"[TX Error] {e}\n")
