@@ -1,0 +1,77 @@
+#include "xparameters.h"
+#include "xuartps.h"
+#include "xil_printf.h"
+
+#define UART0_DEVICE_ID XPAR_XUARTPS_0_DEVICE_ID  // 樹梅派
+#define UART1_DEVICE_ID XPAR_XUARTPS_1_DEVICE_ID  // SDK terminal
+
+XUartPs Uart0, Uart1;
+
+// 初始化 UART
+int init_my_uart(XUartPs *InstancePtr, u16 DeviceId) {
+    XUartPs_Config *Config;
+    int Status;
+
+    Config = XUartPs_LookupConfig(DeviceId);
+    if (NULL == Config) return XST_FAILURE;
+
+    Status = XUartPs_CfgInitialize(InstancePtr, Config, Config->BaseAddress);
+    if (Status != XST_SUCCESS) return XST_FAILURE;
+
+    XUartPs_SetBaudRate(InstancePtr, 115200);
+    return XST_SUCCESS;
+}
+
+int main() {
+    u8 recv_char;
+    int status;
+
+    // 初始化 UART0
+    status = init_my_uart(&Uart0, UART0_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("UART0 init failed\n");
+        return -1;
+    }
+
+    // 初始化 UART1
+    status = init_my_uart(&Uart1, UART1_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("UART1 init failed\n");
+        return -1;
+    }
+
+    xil_printf("Both UARTs initialized!\n");
+
+    while (1) {
+        // 檢查 UART0 (樹梅派) 接收資料
+        if (XUartPs_IsReceiveData(Uart0.Config.BaseAddress)) {
+            recv_char = XUartPs_RecvByte(Uart0.Config.BaseAddress);
+
+            // 印出原始資料到 UART1 (SDK terminal)
+            XUartPs_SendByte(Uart1.Config.BaseAddress, recv_char);
+            XUartPs_SendByte(Uart1.Config.BaseAddress, '\n');
+
+            // 根據收到的資料額外印出 debug
+            if (recv_char == '1') {
+                const char *msg = "Note ON\n";
+                for (int i = 0; msg[i]; i++)
+                    XUartPs_SendByte(Uart1.Config.BaseAddress, msg[i]);
+            } else if (recv_char == '0') {
+                const char *msg = "Note OFF\n";
+                for (int i = 0; msg[i]; i++)
+                    XUartPs_SendByte(Uart1.Config.BaseAddress, msg[i]);
+            } else if (recv_char == '2') {
+                const char *msg = "Score +1\n";
+                for (int i = 0; msg[i]; i++)
+                    XUartPs_SendByte(Uart1.Config.BaseAddress, msg[i]);
+            }
+        }
+
+        	if (XUartPs_IsReceiveData(Uart1.Config.BaseAddress)) {
+            	recv_char = XUartPs_RecvByte(Uart1.Config.BaseAddress);
+                XUartPs_SendByte(Uart0.Config.BaseAddress, recv_char); // 傳送到 UART0 (樹梅派)
+        }
+    }
+
+    return 0;
+}

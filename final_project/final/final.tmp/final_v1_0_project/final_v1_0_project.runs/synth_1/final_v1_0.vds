@@ -1,0 +1,467 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Jun  8 18:56:16 2025
+# Process ID: 4168
+# Current directory: c:/soc/final/final.tmp/final_v1_0_project/final_v1_0_project.runs/synth_1
+# Command line: vivado.exe -log final_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source final_v1_0.tcl
+# Log file: c:/soc/final/final.tmp/final_v1_0_project/final_v1_0_project.runs/synth_1/final_v1_0.vds
+# Journal file: c:/soc/final/final.tmp/final_v1_0_project/final_v1_0_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source final_v1_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/soc/ip_repo/final_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top final_v1_0 -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9404 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 391.410 ; gain = 102.074
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-1565] actual for formal port i_rst is neither a static name nor a globally static expression [c:/soc/ip_repo/final_1.0/hdl/final_v1_0_S00_AXI.vhd:406]
+INFO: [Synth 8-638] synthesizing module 'final_v1_0' [c:/soc/ip_repo/final_1.0/hdl/final_v1_0.vhd:84]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_INTR_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_INTR_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_NUM_OF_INTR bound to: 1 - type: integer 
+	Parameter C_INTR_SENSITIVITY bound to: 32'b11111111111111111111111111111111 
+	Parameter C_INTR_ACTIVE_STATE bound to: 32'b11111111111111111111111111111111 
+	Parameter C_IRQ_SENSITIVITY bound to: 1 - type: integer 
+	Parameter C_IRQ_ACTIVE_STATE bound to: 1 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'final_v1_0_S00_AXI' declared at 'c:/soc/ip_repo/final_1.0/hdl/final_v1_0_S00_AXI.vhd:5' bound to instance 'final_v1_0_S00_AXI_inst' of component 'final_v1_0_S00_AXI' [c:/soc/ip_repo/final_1.0/hdl/final_v1_0.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'final_v1_0_S00_AXI' [c:/soc/ip_repo/final_1.0/hdl/final_v1_0_S00_AXI.vhd:88]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [c:/soc/ip_repo/final_1.0/hdl/final_v1_0_S00_AXI.vhd:239]
+INFO: [Synth 8-226] default block is never used [c:/soc/ip_repo/final_1.0/hdl/final_v1_0_S00_AXI.vhd:369]
+WARNING: [Synth 8-614] signal 'i_siganl_out' is read in the process but is not in the sensitivity list [c:/soc/ip_repo/final_1.0/hdl/final_v1_0_S00_AXI.vhd:364]
+INFO: [Synth 8-3491] module 'final' declared at 'c:/soc/ip_repo/final_1.0/hdl/final.vhd:36' bound to instance 'fianl_inst' of component 'final' [c:/soc/ip_repo/final_1.0/hdl/final_v1_0_S00_AXI.vhd:403]
+INFO: [Synth 8-638] synthesizing module 'final' [c:/soc/ip_repo/final_1.0/hdl/final.vhd:48]
+WARNING: [Synth 8-6014] Unused sequential element div_reg was removed.  [c:/soc/ip_repo/final_1.0/hdl/final.vhd:122]
+INFO: [Synth 8-256] done synthesizing module 'final' (1#1) [c:/soc/ip_repo/final_1.0/hdl/final.vhd:48]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg1_reg was removed.  [c:/soc/ip_repo/final_1.0/hdl/final_v1_0_S00_AXI.vhd:233]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/soc/ip_repo/final_1.0/hdl/final_v1_0_S00_AXI.vhd:237]
+INFO: [Synth 8-256] done synthesizing module 'final_v1_0_S00_AXI' (2#1) [c:/soc/ip_repo/final_1.0/hdl/final_v1_0_S00_AXI.vhd:88]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_NUM_OF_INTR bound to: 1 - type: integer 
+	Parameter C_INTR_SENSITIVITY bound to: -1 - type: integer 
+	Parameter C_INTR_ACTIVE_STATE bound to: -1 - type: integer 
+	Parameter C_IRQ_SENSITIVITY bound to: 1 - type: integer 
+	Parameter C_IRQ_ACTIVE_STATE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'final_v1_0_S_AXI_INTR' declared at 'c:/soc/ip_repo/final_1.0/hdl/final_v1_0_S_AXI_INTR.vhd:5' bound to instance 'final_v1_0_S_AXI_INTR_inst' of component 'final_v1_0_S_AXI_INTR' [c:/soc/ip_repo/final_1.0/hdl/final_v1_0.vhd:192]
+INFO: [Synth 8-638] synthesizing module 'final_v1_0_S_AXI_INTR' [c:/soc/ip_repo/final_1.0/hdl/final_v1_0_S_AXI_INTR.vhd:98]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_NUM_OF_INTR bound to: 1 - type: integer 
+	Parameter C_INTR_SENSITIVITY bound to: -1 - type: integer 
+	Parameter C_INTR_ACTIVE_STATE bound to: -1 - type: integer 
+	Parameter C_IRQ_SENSITIVITY bound to: 1 - type: integer 
+	Parameter C_IRQ_ACTIVE_STATE bound to: 1 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element intr_all_ff_reg was removed.  [c:/soc/ip_repo/final_1.0/hdl/final_v1_0_S_AXI_INTR.vhd:532]
+INFO: [Synth 8-256] done synthesizing module 'final_v1_0_S_AXI_INTR' (3#1) [c:/soc/ip_repo/final_1.0/hdl/final_v1_0_S_AXI_INTR.vhd:98]
+INFO: [Synth 8-256] done synthesizing module 'final_v1_0' (4#1) [c:/soc/ip_repo/final_1.0/hdl/final_v1_0.vhd:84]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[31]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[30]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[29]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[28]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[27]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[26]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[25]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[24]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[23]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[22]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[21]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[20]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[19]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[18]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[17]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[16]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[15]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[14]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[13]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[12]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[11]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[10]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[9]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[8]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[7]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[6]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[5]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[4]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[3]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[2]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[1]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WSTRB[3]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WSTRB[2]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WSTRB[1]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_WSTRB[0]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design final_v1_0_S_AXI_INTR has unconnected port S_AXI_ARPROT[0]
+WARNING: [Synth 8-3331] design final has unconnected port btn_start
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[31]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[30]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[29]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[28]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[27]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[26]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[25]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[24]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[23]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[22]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[21]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[20]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[19]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[18]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[17]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[16]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[15]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[14]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[13]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[12]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[11]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[10]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[7]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[6]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[5]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[4]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[3]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[2]
+WARNING: [Synth 8-3331] design final has unconnected port signal_in[1]
+WARNING: [Synth 8-3331] design final_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design final_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design final_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design final_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design final_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design final_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 445.219 ; gain = 155.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 445.219 ; gain = 155.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 445.219 ; gain = 155.883
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-5544] ROM "intr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 445.219 ; gain = 155.883
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 26    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module final 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module final_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 5     
+Module final_v1_0_S_AXI_INTR 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[31] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[30] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[29] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[28] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[27] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[26] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[25] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[24] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[23] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[22] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[21] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[20] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[19] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[18] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[17] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[16] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[15] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[14] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[13] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[12] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[11] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[10] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[9] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[8] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[7] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[6] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[5] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[4] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[3] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[2] driven by constant 0
+WARNING: [Synth 8-3917] design final_v1_0 has port s_axi_intr_rdata[1] driven by constant 0
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port btn_start
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s00_axi_arprot[0]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s_axi_intr_awprot[2]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s_axi_intr_awprot[1]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s_axi_intr_awprot[0]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s_axi_intr_wdata[31]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s_axi_intr_wdata[30]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s_axi_intr_wdata[29]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s_axi_intr_wdata[28]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s_axi_intr_wdata[27]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s_axi_intr_wdata[26]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s_axi_intr_wdata[25]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s_axi_intr_wdata[24]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s_axi_intr_wdata[23]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s_axi_intr_wdata[22]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s_axi_intr_wdata[21]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s_axi_intr_wdata[20]
+WARNING: [Synth 8-3331] design final_v1_0 has unconnected port s_axi_intr_wdata[19]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'final_v1_0_S_AXI_INTR_inst/axi_rresp_reg[0]' (FDRE) to 'final_v1_0_S_AXI_INTR_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\final_v1_0_S_AXI_INTR_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'final_v1_0_S_AXI_INTR_inst/axi_bresp_reg[0]' (FDRE) to 'final_v1_0_S_AXI_INTR_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\final_v1_0_S_AXI_INTR_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'final_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'final_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\final_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'final_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'final_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\final_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[1]' (FDC) to 'final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[5]'
+INFO: [Synth 8-3886] merging instance 'final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[2]' (FDC) to 'final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[5]'
+INFO: [Synth 8-3886] merging instance 'final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[3]' (FDC) to 'final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[5]'
+INFO: [Synth 8-3886] merging instance 'final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[4]' (FDC) to 'final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[5] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 613.016 ; gain = 323.680
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 613.016 ; gain = 323.680
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 614.016 ; gain = 324.680
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 614.016 ; gain = 324.680
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 614.016 ; gain = 324.680
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 614.016 ; gain = 324.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 614.016 ; gain = 324.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 614.016 ; gain = 324.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 614.016 ; gain = 324.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     2|
+|2     |LUT1 |     4|
+|3     |LUT2 |     7|
+|4     |LUT3 |     7|
+|5     |LUT4 |    29|
+|6     |LUT5 |    32|
+|7     |LUT6 |     6|
+|8     |FDCE |     5|
+|9     |FDRE |   155|
+|10    |FDSE |    11|
+|11    |IBUF |    62|
+|12    |OBUF |    91|
++------+-----+------+
+
+Report Instance Areas: 
++------+-----------------------------+----------------------+------+
+|      |Instance                     |Module                |Cells |
++------+-----------------------------+----------------------+------+
+|1     |top                          |                      |   411|
+|2     |  final_v1_0_S00_AXI_inst    |final_v1_0_S00_AXI    |   200|
+|3     |    fianl_inst               |final                 |    10|
+|4     |  final_v1_0_S_AXI_INTR_inst |final_v1_0_S_AXI_INTR |    56|
++------+-----------------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 614.016 ; gain = 324.680
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 162 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 614.016 ; gain = 324.680
+Synthesis Optimization Complete : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 614.016 ; gain = 324.680
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 717.262 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 137 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 717.262 ; gain = 441.156
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 717.262 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'c:/soc/final/final.tmp/final_v1_0_project/final_v1_0_project.runs/synth_1/final_v1_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file final_v1_0_utilization_synth.rpt -pb final_v1_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jun  8 18:56:29 2025...

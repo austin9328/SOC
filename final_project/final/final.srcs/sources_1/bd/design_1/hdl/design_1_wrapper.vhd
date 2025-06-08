@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Thu Jun  5 23:26:21 2025
+--Date        : Sun Jun  8 18:56:53 2025
 --Host        : LAPTOP-FFDNP4IP running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -34,6 +34,9 @@ entity design_1_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    LED : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    btn_hit : in STD_LOGIC;
+    btn_start : in STD_LOGIC;
     rx : in STD_LOGIC;
     tx : out STD_LOGIC
   );
@@ -42,6 +45,11 @@ end design_1_wrapper;
 architecture STRUCTURE of design_1_wrapper is
   component design_1 is
   port (
+    rx : in STD_LOGIC;
+    tx : out STD_LOGIC;
+    btn_hit : in STD_LOGIC;
+    btn_start : in STD_LOGIC;
+    LED : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -62,9 +70,7 @@ architecture STRUCTURE of design_1_wrapper is
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC;
-    rx : in STD_LOGIC;
-    tx : out STD_LOGIC
+    FIXED_IO_ps_porb : inout STD_LOGIC
   );
   end component design_1;
 begin
@@ -91,6 +97,9 @@ design_1_i: component design_1
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      LED(7 downto 0) => LED(7 downto 0),
+      btn_hit => btn_hit,
+      btn_start => btn_start,
       rx => rx,
       tx => tx
     );

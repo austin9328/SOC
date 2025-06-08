@@ -18,8 +18,8 @@
 
 #include "xparameters_ps.h"
 
-#define STDIN_BASEADDRESS 0xE0000000
-#define STDOUT_BASEADDRESS 0xE0000000
+#define STDIN_BASEADDRESS 0xE0001000
+#define STDOUT_BASEADDRESS 0xE0001000
 
 /******************************************************************/
 
@@ -34,7 +34,7 @@
 
 /* Definitions for peripheral PS7_DDR_0 */
 #define XPAR_PS7_DDR_0_S_AXI_BASEADDR 0x00100000
-#define XPAR_PS7_DDR_0_S_AXI_HIGHADDR 0x3FFFFFFF
+#define XPAR_PS7_DDR_0_S_AXI_HIGHADDR 0x1FFFFFFF
 
 
 /******************************************************************/
@@ -121,6 +121,17 @@
 #define XPAR_XEMACPS_0_ENET_SLCR_10Mbps_DIV0 8
 #define XPAR_XEMACPS_0_ENET_SLCR_10Mbps_DIV1 50
 #define XPAR_XEMACPS_0_ENET_TSU_CLK_FREQ_HZ 0
+
+
+/******************************************************************/
+
+/* Definitions for driver FINAL */
+#define XPAR_FINAL_NUM_INSTANCES 1
+
+/* Definitions for peripheral FINAL_0 */
+#define XPAR_FINAL_0_DEVICE_ID 0
+#define XPAR_FINAL_0_S00_AXI_BASEADDR 0x43C00000
+#define XPAR_FINAL_0_S00_AXI_HIGHADDR 0x43C0FFFF
 
 
 /******************************************************************/
@@ -242,6 +253,16 @@
 #define XPAR_XQSPIPS_0_QSPI_MODE 0
 #define XPAR_XQSPIPS_0_QSPI_BUS_WIDTH 2
 
+
+/******************************************************************/
+
+/* Definitions for Fabric interrupts connected to ps7_scugic_0 */
+#define XPAR_FABRIC_FINAL_0_IRQ_INTR 61U
+
+/******************************************************************/
+
+/* Canonical definitions for Fabric interrupts connected to ps7_scugic_0 */
+#define XPAR_FABRIC_FINAL_0_VEC_ID XPAR_FABRIC_FINAL_0_IRQ_INTR
 
 /******************************************************************/
 

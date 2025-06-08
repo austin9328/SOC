@@ -71,6 +71,8 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/soc/final/final.cache/wt [current_project]
   set_property parent.project_path C:/soc/final/final.xpr [current_project]
+  set_property ip_repo_paths C:/soc/ip_repo/final_1.0 [current_project]
+  update_ip_catalog
   set_property ip_output_repo C:/soc/final/final.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]

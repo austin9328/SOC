@@ -1,0 +1,88 @@
+#include "xparameters.h"
+#include "xuartps.h"
+#include "xil_printf.h"
+
+// 假設你有以下暫存器定義（可用 volatile）
+volatile u32 slv_reg0 = 0;
+volatile u32 slv_reg1 = 0;
+volatile u32 slv_reg2 = 0;
+volatile u32 slv_reg3 = 0;
+
+#define UART0_DEVICE_ID XPAR_XUARTPS_0_DEVICE_ID  // 樹梅派
+#define UART1_DEVICE_ID XPAR_XUARTPS_1_DEVICE_ID  // SDK terminal
+
+XUartPs Uart0, Uart1;
+
+int init_my_uart(XUartPs *InstancePtr, u16 DeviceId) {
+    XUartPs_Config *Config;
+    int Status;
+
+    Config = XUartPs_LookupConfig(DeviceId);
+    if (NULL == Config) return XST_FAILURE;
+
+    Status = XUartPs_CfgInitialize(InstancePtr, Config, Config->BaseAddress);
+    if (Status != XST_SUCCESS) return XST_FAILURE;
+
+    XUartPs_SetBaudRate(InstancePtr, 115200);
+    return XST_SUCCESS;
+}
+
+int main() {
+    u8 recv_char;
+    u32 prev_lower_bits = slv_reg1 & 0xF; // slv_reg1(3 downto 0)
+    int status;
+
+    // 初始化 UART0
+    status = init_my_uart(&Uart0, UART0_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("UART0 init failed\n");
+        return -1;
+    }
+
+    // 初始化 UART1
+    status = init_my_uart(&Uart1, UART1_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("UART1 init failed\n");
+        return -1;
+    }
+
+    xil_printf("Both UARTs initialized!\n");
+
+    while (1) {
+        // 條件一：當 slv_reg1(4) == 1 傳送 'S' 表示 start
+        if ((slv_reg1 >> 4) & 0x1) {
+            XUartPs_SendByte(Uart0.Config.BaseAddress, 'S');
+            slv_reg1 &= ~(1 << 4);  // 清掉觸發位元
+        }
+
+        // 條件二：當 slv_reg1(3 downto 0) 改變，傳送新值
+        u32 current_lower_bits = slv_reg1 & 0xF;
+        if (current_lower_bits != prev_lower_bits) {
+            XUartPs_SendByte(Uart0.Config.BaseAddress, (u8)current_lower_bits);
+            prev_lower_bits = current_lower_bits;
+        }
+
+        // 接收樹梅派資料
+        if (XUartPs_IsReceiveData(Uart0.Config.BaseAddress)) {
+            recv_char = XUartPs_RecvByte(Uart0.Config.BaseAddress);
+            XUartPs_SendByte(Uart1.Config.BaseAddress, recv_char); // 回顯到 terminal
+
+            // 根據接收到的值更新 slv_reg0
+            if (recv_char == '0') {
+                slv_reg0 &= ~0x1; // 清除 bit 0
+            } else if (recv_char == '1') {
+                slv_reg0 |= 0x1;  // 設定 bit 0
+            } else if (recv_char == 'D') {
+                slv_reg0 |= (1 << 8);  // 設定 bit 8 表示 done
+            }
+        }
+
+        // SDK Terminal 輸入轉發給樹梅派（for debug）
+        if (XUartPs_IsReceiveData(Uart1.Config.BaseAddress)) {
+            recv_char = XUartPs_RecvByte(Uart1.Config.BaseAddress);
+            XUartPs_SendByte(Uart0.Config.BaseAddress, recv_char);
+        }
+    }
+
+    return 0;
+}
