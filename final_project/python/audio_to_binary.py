@@ -36,7 +36,7 @@ def audio_to_binary(filepath, difficulty="easy", time_resolution=0.5):
 if __name__ == "__main__":
     filepath = "TheFatRat - Monody (feat. Laura Brehm) (Orchestral Remix by sJLs) (Lyrics Video) (R5aurUlfn3w).mp3"
     
-    bin_seq, bpm = audio_to_binary(filepath, difficulty="easy", time_resolution=0.5)
+    bin_seq= audio_to_binary(filepath, difficulty="easy", time_resolution=0.5)
 
     print("前 100 個半秒格的節拍（0.5秒一格）：")
     print(''.join(map(str, bin_seq[:100])))
