@@ -17,11 +17,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15452 
+INFO: Helper process launched with PID 14400 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 414.648 ; gain = 108.973
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 414.961 ; gain = 108.930
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-1565] actual for formal port i_rst is neither a static name nor a globally static expression [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0_S00_AXI.vhd:406]
+WARNING: [Synth 8-1565] actual for formal port i_rst is neither a static name nor a globally static expression [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0_S00_AXI.vhd:406]
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/soc/final/final.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:45]
 INFO: [Synth 8-3491] module 'design_1' declared at 'C:/soc/final/final.srcs/sources_1/bd/design_1/synth/design_1.vhd:1121' bound to instance 'design_1_i' of component 'design_1' [C:/soc/final/final.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:77]
 INFO: [Synth 8-638] synthesizing module 'design_1' [C:/soc/final/final.srcs/sources_1/bd/design_1/synth/design_1.vhd:1156]
@@ -36,8 +36,8 @@ INFO: [Synth 8-638] synthesizing module 'design_1_final_0_0' [c:/soc/final/final
 	Parameter C_IRQ_ACTIVE_STATE bound to: 1 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'final_v1_0' declared at 'c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0.vhd:5' bound to instance 'U0' of component 'final_v1_0' [c:/soc/final/final.srcs/sources_1/bd/design_1/ip/design_1_final_0_0/synth/design_1_final_0_0.vhd:232]
-INFO: [Synth 8-638] synthesizing module 'final_v1_0' [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0.vhd:84]
+INFO: [Synth 8-3491] module 'final_v1_0' declared at 'c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0.vhd:5' bound to instance 'U0' of component 'final_v1_0' [c:/soc/final/final.srcs/sources_1/bd/design_1/ip/design_1_final_0_0/synth/design_1_final_0_0.vhd:232]
+INFO: [Synth 8-638] synthesizing module 'final_v1_0' [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0.vhd:84]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_S_AXI_INTR_DATA_WIDTH bound to: 32 - type: integer 
@@ -49,20 +49,20 @@ INFO: [Synth 8-638] synthesizing module 'final_v1_0' [c:/soc/final/final.srcs/so
 	Parameter C_IRQ_ACTIVE_STATE bound to: 1 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'final_v1_0_S00_AXI' declared at 'c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0_S00_AXI.vhd:5' bound to instance 'final_v1_0_S00_AXI_inst' of component 'final_v1_0_S00_AXI' [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0.vhd:159]
-INFO: [Synth 8-638] synthesizing module 'final_v1_0_S00_AXI' [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0_S00_AXI.vhd:88]
+INFO: [Synth 8-3491] module 'final_v1_0_S00_AXI' declared at 'c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0_S00_AXI.vhd:5' bound to instance 'final_v1_0_S00_AXI_inst' of component 'final_v1_0_S00_AXI' [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'final_v1_0_S00_AXI' [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0_S00_AXI.vhd:88]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-226] default block is never used [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0_S00_AXI.vhd:239]
-INFO: [Synth 8-226] default block is never used [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0_S00_AXI.vhd:369]
-WARNING: [Synth 8-614] signal 'i_siganl_out' is read in the process but is not in the sensitivity list [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0_S00_AXI.vhd:364]
-INFO: [Synth 8-3491] module 'final' declared at 'c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final.vhd:36' bound to instance 'fianl_inst' of component 'final' [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0_S00_AXI.vhd:403]
-INFO: [Synth 8-638] synthesizing module 'final' [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final.vhd:48]
-WARNING: [Synth 8-6014] Unused sequential element div_reg was removed.  [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final.vhd:122]
-INFO: [Synth 8-256] done synthesizing module 'final' (1#1) [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final.vhd:48]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg1_reg was removed.  [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0_S00_AXI.vhd:233]
-WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0_S00_AXI.vhd:237]
-INFO: [Synth 8-256] done synthesizing module 'final_v1_0_S00_AXI' (2#1) [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0_S00_AXI.vhd:88]
+INFO: [Synth 8-226] default block is never used [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0_S00_AXI.vhd:239]
+INFO: [Synth 8-226] default block is never used [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0_S00_AXI.vhd:369]
+WARNING: [Synth 8-614] signal 'i_siganl_out' is read in the process but is not in the sensitivity list [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0_S00_AXI.vhd:364]
+INFO: [Synth 8-3491] module 'final' declared at 'c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final.vhd:36' bound to instance 'fianl_inst' of component 'final' [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0_S00_AXI.vhd:403]
+INFO: [Synth 8-638] synthesizing module 'final' [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final.vhd:48]
+WARNING: [Synth 8-6014] Unused sequential element div_reg was removed.  [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final.vhd:122]
+INFO: [Synth 8-256] done synthesizing module 'final' (1#1) [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final.vhd:48]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg1_reg was removed.  [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0_S00_AXI.vhd:233]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0_S00_AXI.vhd:237]
+INFO: [Synth 8-256] done synthesizing module 'final_v1_0_S00_AXI' (2#1) [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0_S00_AXI.vhd:88]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
 	Parameter C_NUM_OF_INTR bound to: 1 - type: integer 
@@ -70,8 +70,8 @@ INFO: [Synth 8-256] done synthesizing module 'final_v1_0_S00_AXI' (2#1) [c:/soc/
 	Parameter C_INTR_ACTIVE_STATE bound to: -1 - type: integer 
 	Parameter C_IRQ_SENSITIVITY bound to: 1 - type: integer 
 	Parameter C_IRQ_ACTIVE_STATE bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'final_v1_0_S_AXI_INTR' declared at 'c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0_S_AXI_INTR.vhd:5' bound to instance 'final_v1_0_S_AXI_INTR_inst' of component 'final_v1_0_S_AXI_INTR' [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0.vhd:192]
-INFO: [Synth 8-638] synthesizing module 'final_v1_0_S_AXI_INTR' [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0_S_AXI_INTR.vhd:98]
+INFO: [Synth 8-3491] module 'final_v1_0_S_AXI_INTR' declared at 'c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0_S_AXI_INTR.vhd:5' bound to instance 'final_v1_0_S_AXI_INTR_inst' of component 'final_v1_0_S_AXI_INTR' [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0.vhd:192]
+INFO: [Synth 8-638] synthesizing module 'final_v1_0_S_AXI_INTR' [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0_S_AXI_INTR.vhd:98]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
 	Parameter C_NUM_OF_INTR bound to: 1 - type: integer 
@@ -79,9 +79,9 @@ INFO: [Synth 8-638] synthesizing module 'final_v1_0_S_AXI_INTR' [c:/soc/final/fi
 	Parameter C_INTR_ACTIVE_STATE bound to: -1 - type: integer 
 	Parameter C_IRQ_SENSITIVITY bound to: 1 - type: integer 
 	Parameter C_IRQ_ACTIVE_STATE bound to: 1 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element intr_all_ff_reg was removed.  [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0_S_AXI_INTR.vhd:532]
-INFO: [Synth 8-256] done synthesizing module 'final_v1_0_S_AXI_INTR' (3#1) [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0_S_AXI_INTR.vhd:98]
-INFO: [Synth 8-256] done synthesizing module 'final_v1_0' (4#1) [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0876/hdl/final_v1_0.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element intr_all_ff_reg was removed.  [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0_S_AXI_INTR.vhd:532]
+INFO: [Synth 8-256] done synthesizing module 'final_v1_0_S_AXI_INTR' (3#1) [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0_S_AXI_INTR.vhd:98]
+INFO: [Synth 8-256] done synthesizing module 'final_v1_0' (4#1) [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/0cbf/hdl/final_v1_0.vhd:84]
 INFO: [Synth 8-256] done synthesizing module 'design_1_final_0_0' (5#1) [c:/soc/final/final.srcs/sources_1/bd/design_1/ip/design_1_final_0_0/synth/design_1_final_0_0.vhd:107]
 INFO: [Synth 8-3491] module 'design_1_proc_sys_reset_0_0' declared at 'c:/soc/final/final.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/synth/design_1_proc_sys_reset_0_0.vhd:59' bound to instance 'proc_sys_reset_0' of component 'design_1_proc_sys_reset_0_0' [C:/soc/final/final.srcs/sources_1/bd/design_1/synth/design_1.vhd:1488]
 INFO: [Synth 8-638] synthesizing module 'design_1_proc_sys_reset_0_0' [c:/soc/final/final.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/synth/design_1_proc_sys_reset_0_0.vhd:74]
@@ -1327,7 +1327,7 @@ WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector__parameteriz
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector__parameterized0 has unconnected port s_axi_awburst[0]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 587.504 ; gain = 281.828
+Finished RTL Elaboration : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 586.188 ; gain = 280.156
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1340,10 +1340,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 587.504 ; gain = 281.828
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 586.188 ; gain = 280.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 587.504 ; gain = 281.828
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 586.188 ; gain = 280.156
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1360,7 +1360,7 @@ Parsing XDC File [c:/soc/final/final.srcs/sources_1/bd/design_1/ip/design_1_proc
 Finished Parsing XDC File [c:/soc/final/final.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc] for cell 'design_1_i/proc_sys_reset_0/U0'
 Parsing XDC File [c:/soc/final/final.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc] for cell 'design_1_i/proc_sys_reset_0/U0'
 Finished Parsing XDC File [c:/soc/final/final.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc] for cell 'design_1_i/proc_sys_reset_0/U0'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 861.535 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 861.410 ; gain = 0.000
 Parsing XDC File [C:/soc/final/final.srcs/constrs_1/new/fianl.xdc]
 Finished Parsing XDC File [C:/soc/final/final.srcs/constrs_1/new/fianl.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/soc/final/final.srcs/constrs_1/new/fianl.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
@@ -1369,26 +1369,26 @@ Parsing XDC File [C:/soc/final/final.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/soc/final/final.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/soc/final/final.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 861.535 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 861.410 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 861.535 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 861.410 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 861.535 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 861.535 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 861.410 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 861.410 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 861.535 ; gain = 555.859
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 861.410 ; gain = 555.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 861.535 ; gain = 555.859
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 861.410 ; gain = 555.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1403,7 +1403,7 @@ Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/xbar. (co
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 861.535 ; gain = 555.859
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 861.410 ; gain = 555.379
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "intr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/soc/final/final.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
@@ -1432,7 +1432,7 @@ INFO: [Synth 8-5544] ROM "f_mux_return1" won't be mapped to Block RAM because ad
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 861.535 ; gain = 555.859
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 861.410 ; gain = 555.379
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1450,7 +1450,7 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 4     
-	   2 Input      4 Bit       Adders := 5     
+	   2 Input      4 Bit       Adders := 6     
 	   2 Input      2 Bit       Adders := 2     
 +---Registers : 
 	               66 Bit    Registers := 4     
@@ -1464,7 +1464,7 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 3     
 	                6 Bit    Registers := 1     
 	                5 Bit    Registers := 6     
-	                4 Bit    Registers := 9     
+	                4 Bit    Registers := 10    
 	                3 Bit    Registers := 5     
 	                2 Bit    Registers := 15    
 	                1 Bit    Registers := 76    
@@ -1481,11 +1481,11 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
-	   2 Input      4 Bit        Muxes := 18    
+	   2 Input      4 Bit        Muxes := 19    
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 16    
 	   4 Input      2 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 75    
+	   2 Input      1 Bit        Muxes := 73    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -1495,12 +1495,16 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module final 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
 	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
 Module final_v1_0_S00_AXI 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -1761,9 +1765,9 @@ INFO: [Synth 8-3886] merging instance 'design_1_i/final_0/U0/final_v1_0_S_AXI_IN
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/final_0/\U0/final_v1_0_S_AXI_INTR_inst/axi_rresp_reg[1] )
 INFO: [Synth 8-3886] merging instance 'design_1_i/final_0/U0/final_v1_0_S_AXI_INTR_inst/axi_bresp_reg[0]' (FDRE) to 'design_1_i/final_0/U0/final_v1_0_S_AXI_INTR_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/final_0/\U0/final_v1_0_S_AXI_INTR_inst/axi_bresp_reg[1] )
-INFO: [Synth 8-3886] merging instance 'design_1_i/final_0/U0/final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[1]' (FDC) to 'design_1_i/final_0/U0/final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[5]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/final_0/U0/final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[2]' (FDC) to 'design_1_i/final_0/U0/final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[5]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/final_0/U0/final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[3]' (FDC) to 'design_1_i/final_0/U0/final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[5]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/final_0/U0/final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[1]' (FDC) to 'design_1_i/final_0/U0/final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[2]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/final_0/U0/final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[2]' (FDC) to 'design_1_i/final_0/U0/final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[3]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/final_0/U0/final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[3]' (FDC) to 'design_1_i/final_0/U0/final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[4]'
 INFO: [Synth 8-3886] merging instance 'design_1_i/final_0/U0/final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[4]' (FDC) to 'design_1_i/final_0/U0/final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[5]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/final_0/\U0/final_v1_0_S00_AXI_inst/fianl_inst/i_LED_reg[5] )
 INFO: [Synth 8-3886] merging instance 'design_1_i/proc_sys_reset_0/U0/SEQ/pr_dec_reg[1]' (FD) to 'design_1_i/proc_sys_reset_0/U0/SEQ/bsr_dec_reg[1]'
@@ -1779,7 +1783,7 @@ INFO: [Synth 8-3886] merging instance 'design_1_i/ps7_0_axi_periph/s00_couplers/
 INFO: [Synth 8-3886] merging instance 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/aresetn_d_reg[0]' (FDR) to 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/aresetn_d_reg[0]'
 INFO: [Synth 8-3886] merging instance 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/aresetn_d_reg[1]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 861.535 ; gain = 555.859
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 861.410 ; gain = 555.379
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1791,13 +1795,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 982.441 ; gain = 676.766
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 980.004 ; gain = 673.973
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1067.660 ; gain = 761.984
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 1064.609 ; gain = 758.578
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1809,7 +1813,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1067.660 ; gain = 761.984
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1064.609 ; gain = 758.578
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1834,7 +1838,7 @@ INFO: [Synth 8-5365] Flop inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1067.660 ; gain = 761.984
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1064.609 ; gain = 758.578
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1847,7 +1851,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1067.660 ; gain = 761.984
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1064.609 ; gain = 758.578
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1859,25 +1863,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1067.660 ; gain = 761.984
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1064.609 ; gain = 758.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1067.660 ; gain = 761.984
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1064.609 ; gain = 758.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1067.660 ; gain = 761.984
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1064.609 ; gain = 758.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1067.660 ; gain = 761.984
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1064.609 ; gain = 758.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1916,16 +1920,16 @@ Report Cell Usage:
 |2     |BUFG    |     1|
 |3     |CARRY4  |    18|
 |4     |LUT1    |   131|
-|5     |LUT2    |    46|
-|6     |LUT3    |   254|
-|7     |LUT4    |   139|
-|8     |LUT5    |   102|
-|9     |LUT6    |   192|
+|5     |LUT2    |    47|
+|6     |LUT3    |   255|
+|7     |LUT4    |   140|
+|8     |LUT5    |   100|
+|9     |LUT6    |   195|
 |10    |PS7     |     1|
 |11    |SRL16   |     1|
 |12    |SRL16E  |    18|
 |13    |SRLC32E |    47|
-|14    |FDCE    |     5|
+|14    |FDCE    |     9|
 |15    |FDR     |     8|
 |16    |FDRE    |   862|
 |17    |FDSE    |    30|
@@ -1937,12 +1941,12 @@ Report Instance Areas:
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
 |      |Instance                                           |Module                                                         |Cells |
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
-|1     |top                                                |                                                               |  1996|
-|2     |  design_1_i                                       |design_1                                                       |  1985|
-|3     |    final_0                                        |design_1_final_0_0                                             |   266|
-|4     |      U0                                           |final_v1_0                                                     |   266|
-|5     |        final_v1_0_S00_AXI_inst                    |final_v1_0_S00_AXI                                             |   204|
-|6     |          fianl_inst                               |final                                                          |    10|
+|1     |top                                                |                                                               |  2004|
+|2     |  design_1_i                                       |design_1                                                       |  1993|
+|3     |    final_0                                        |design_1_final_0_0                                             |   274|
+|4     |      U0                                           |final_v1_0                                                     |   274|
+|5     |        final_v1_0_S00_AXI_inst                    |final_v1_0_S00_AXI                                             |   212|
+|6     |          fianl_inst                               |final                                                          |    18|
 |7     |        final_v1_0_S_AXI_INTR_inst                 |final_v1_0_S_AXI_INTR                                          |    62|
 |8     |    proc_sys_reset_0                               |design_1_proc_sys_reset_0_0                                    |    66|
 |9     |      U0                                           |proc_sys_reset                                                 |    66|
@@ -1989,17 +1993,17 @@ Report Instance Areas:
 |50    |                bresp_fifo_0                       |axi_protocol_converter_v2_1_18_b2s_simple_fifo__parameterized0 |    10|
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1067.660 ; gain = 761.984
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1064.609 ; gain = 758.578
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 170 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:41 . Memory (MB): peak = 1067.660 ; gain = 487.953
-Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1067.660 ; gain = 761.984
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:40 . Memory (MB): peak = 1064.609 ; gain = 483.355
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1064.609 ; gain = 758.578
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1067.660 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1064.609 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   FDR => FDRE: 8 instances
@@ -2008,10 +2012,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 230 Infos, 119 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1067.660 ; gain = 768.859
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1067.660 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1064.609 ; gain = 765.500
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1064.609 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/soc/final/final.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jun  8 18:59:55 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 10 22:24:31 2025...

@@ -37,10 +37,10 @@
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_proc_sys_reset_0_0/sim/design_1_proc_sys_reset_0_0.vhd" \
   "../../../bd/design_1/sim/design_1.vhd" \
-  "../../../bd/design_1/ipshared/0876/hdl/final.vhd" \
-  "../../../bd/design_1/ipshared/0876/hdl/final_v1_0_S00_AXI.vhd" \
-  "../../../bd/design_1/ipshared/0876/hdl/final_v1_0_S_AXI_INTR.vhd" \
-  "../../../bd/design_1/ipshared/0876/hdl/final_v1_0.vhd" \
+  "../../../bd/design_1/ipshared/0cbf/hdl/final.vhd" \
+  "../../../bd/design_1/ipshared/0cbf/hdl/final_v1_0_S00_AXI.vhd" \
+  "../../../bd/design_1/ipshared/0cbf/hdl/final_v1_0_S_AXI_INTR.vhd" \
+  "../../../bd/design_1/ipshared/0cbf/hdl/final_v1_0.vhd" \
   "../../../bd/design_1/ip/design_1_final_0_0/sim/design_1_final_0_0.vhd" \
 -endlib
 -makelib ies_lib/generic_baseblocks_v2_1_0 \

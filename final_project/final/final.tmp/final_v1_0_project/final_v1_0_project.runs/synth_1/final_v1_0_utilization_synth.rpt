@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Jun  8 18:56:29 2025
+| Date         : Tue Jun 10 22:20:34 2025
 | Host         : LAPTOP-FFDNP4IP running 64-bit major release  (build 9200)
 | Command      : report_utilization -file final_v1_0_utilization_synth.rpt -pb final_v1_0_utilization_synth.pb
 | Design       : final_v1_0
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   77 |     0 |     53200 |  0.14 |
-|   LUT as Logic          |   77 |     0 |     53200 |  0.14 |
+| Slice LUTs*             |   80 |     0 |     53200 |  0.15 |
+|   LUT as Logic          |   80 |     0 |     53200 |  0.15 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |  171 |     0 |    106400 |  0.16 |
-|   Register as Flip Flop |  171 |     0 |    106400 |  0.16 |
+| Slice Registers         |  175 |     0 |    106400 |  0.16 |
+|   Register as Flip Flop |  175 |     0 |    106400 |  0.16 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -55,7 +55,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 5     |          Yes |           - |        Reset |
+| 9     |          Yes |           - |        Reset |
 | 11    |          Yes |         Set |            - |
 | 155   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -149,13 +149,13 @@ Table of Contents
 | FDRE     |  155 |        Flop & Latch |
 | OBUF     |   91 |                  IO |
 | IBUF     |   62 |                  IO |
-| LUT5     |   32 |                 LUT |
-| LUT4     |   29 |                 LUT |
+| LUT5     |   30 |                 LUT |
+| LUT4     |   30 |                 LUT |
 | FDSE     |   11 |        Flop & Latch |
-| LUT3     |    7 |                 LUT |
-| LUT2     |    7 |                 LUT |
-| LUT6     |    6 |                 LUT |
-| FDCE     |    5 |        Flop & Latch |
+| LUT6     |    9 |                 LUT |
+| FDCE     |    9 |        Flop & Latch |
+| LUT3     |    8 |                 LUT |
+| LUT2     |    8 |                 LUT |
 | LUT1     |    4 |                 LUT |
 | BUFG     |    2 |               Clock |
 +----------+------+---------------------+
