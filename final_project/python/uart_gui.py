@@ -27,7 +27,7 @@ class UARTReaderGUI:
         tk.Label(root, text="Audio File Path:").grid(row=2, column=0, sticky="w")
         self.audio_path_entry = tk.Entry(root, width=40)
         self.audio_path_entry.grid(row=2, column=1)
-        self.audio_path_entry.insert(0, "TheFatRat - Monody (feat. Laura Brehm) (Orchestral Remix by sJLs) (Lyrics Video) (R5aurUlfn3w).mp3")
+        self.audio_path_entry.insert(0, "/home/soc/Desktop/music.mp3")
 
         self.connect_btn = tk.Button(root, text="Connect", command=self.connect)
         self.connect_btn.grid(row=3, column=0, pady=5)
@@ -78,6 +78,14 @@ class UARTReaderGUI:
                     line = self.serial_port.readline().decode(errors='ignore').strip()
                     if line == "S":
                         threading.Thread(target=self.send_audio_binary, daemon=True).start()
+                    elif line.startswith("p"):  # 分數資料，如 "p5", "p12"
+                        try:
+                            score_val = int(line[1:])
+                            self.score = score_val
+                            self.score_label.config(text=f"Score: {self.score}")
+                            self.output.insert(tk.END, f"[Score Update] {line}\n")
+                        except ValueError:
+                            self.output.insert(tk.END, f"[Parse Error] Invalid score: {line}\n")
                     else:
                         self.output.insert(tk.END, f"[RX] {line}\n")
                         self.output.see(tk.END)
@@ -112,6 +120,7 @@ class UARTReaderGUI:
         filepath = self.audio_path_entry.get().strip()
         try:
             binary_data = audio_to_binary(filepath)
+           
             self.output.insert(tk.END, f"[Sending {len(binary_data)} bits]\n")
             play_audio(filepath)
             for bit in binary_data:
@@ -125,6 +134,7 @@ class UARTReaderGUI:
             self.score = 0
             self.score_label.config(text="Score: 0")
         except Exception as e:
+           
             self.output.insert(tk.END, f"[Audio Error] {e}\n")
 
 
