@@ -5,6 +5,7 @@ import threading
 import time
 import numpy as np
 from audio_to_binary import audio_to_binary  # 需自訂這個函式
+import pygame
 
 class UARTReaderGUI:
     def __init__(self, root):
@@ -26,7 +27,7 @@ class UARTReaderGUI:
         tk.Label(root, text="Audio File Path:").grid(row=2, column=0, sticky="w")
         self.audio_path_entry = tk.Entry(root, width=40)
         self.audio_path_entry.grid(row=2, column=1)
-        self.audio_path_entry.insert(0, "/home/soc/Desktop/music.mp3")
+        self.audio_path_entry.insert(0, "TheFatRat - Monody (feat. Laura Brehm) (Orchestral Remix by sJLs) (Lyrics Video) (R5aurUlfn3w).mp3")
 
         self.connect_btn = tk.Button(root, text="Connect", command=self.connect)
         self.connect_btn.grid(row=3, column=0, pady=5)
@@ -112,18 +113,25 @@ class UARTReaderGUI:
         try:
             binary_data = audio_to_binary(filepath)
             self.output.insert(tk.END, f"[Sending {len(binary_data)} bits]\n")
+            play_audio(filepath)
             for bit in binary_data:
                 if not self.reading: break
                 self.serial_port.write(str(int(bit)).encode() + b'\n')
                 self.output.insert(tk.END, f"[TX]{bit}\n")
                 self.output.see(tk.END)
                 self.display_note(str(int(bit)))
-                time.sleep(1)
+                time.sleep(0.5)
             self.serial_port.write(b'D\n')  # 結尾時送 'D'
             self.score = 0
             self.score_label.config(text="Score: 0")
         except Exception as e:
             self.output.insert(tk.END, f"[Audio Error] {e}\n")
+
+
+def play_audio(filepath):
+    pygame.mixer.init()
+    pygame.mixer.music.load(filepath)
+    pygame.mixer.music.play()
 
 if __name__ == "__main__":
     root = tk.Tk()
