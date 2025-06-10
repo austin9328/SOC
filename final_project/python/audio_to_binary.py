@@ -3,34 +3,50 @@ import librosa
 import matplotlib.pyplot as plt
 
 
-def audio_to_binary(filepath, threshold_ratio=0.1):
-    # 載入音訊（自動抓取取樣率 sr）
+def audio_to_binary(filepath, difficulty="easy", time_resolution=0.5):
+    # 載入音訊
     y, sr = librosa.load(filepath, sr=None, mono=True)
 
-    # 正規化音訊到 -1 ~ 1
-    y = y / np.max(np.abs(y))
+    # 偵測節拍
+    onset_env = librosa.onset.onset_strength(y=y, sr=sr)
+    tempo, beat_frames = librosa.beat.beat_track(onset_envelope=onset_env, sr=sr)
+    beat_times = librosa.frames_to_time(beat_frames, sr=sr)
 
-    # 每秒取一個點：每隔 sr 個 sample 抓一個
-    y_downsampled = y[::sr]
+    # 根據難度選擇節拍密度
+    level_skip = {"easy": 4, "medium": 2, "hard": 1}
+    skip = level_skip.get(difficulty, 4)
+    selected_beats = beat_times[::skip]
 
-    # 設定門檻並轉換為 0 / 1
-    binary_seq = np.where(np.abs(y_downsampled) > threshold_ratio, 1, 0)
+    # 計算總時間格數（0.5秒為一格）
+    total_length_seconds = len(y) / sr
+    total_bins = int(np.ceil(total_length_seconds / time_resolution))
+
+    # 建立 0/1 序列
+    binary_seq = np.zeros(total_bins, dtype=int)
+
+    # 節拍時間轉成第幾格，設為1
+    for bt in selected_beats:
+        bin_index = int(bt / time_resolution)
+        if bin_index < total_bins:
+            binary_seq[bin_index] = 1
 
     return binary_seq
 
 
 if __name__ == "__main__":
-    filepath = "HAPPY Birthday Song, Happy Birthday to You (8QF9hM1MQwc).mp3"
+    filepath = "TheFatRat - Monody (feat. Laura Brehm) (Orchestral Remix by sJLs) (Lyrics Video) (R5aurUlfn3w).mp3"
     
-    bin_seq = audio_to_binary(filepath)
+    bin_seq, bpm = audio_to_binary(filepath, difficulty="easy", time_resolution=0.5)
 
-    print("前 100 個二進位資料：")
+    print("前 100 個半秒格的節拍（0.5秒一格）：")
     print(''.join(map(str, bin_seq[:100])))
 
-    # 顯示簡單圖形
+    # 畫圖看結果
+    plt.figure(figsize=(12, 3))
     plt.plot(bin_seq[:1000])
-    plt.title("Binary Signal from Audio")
-    plt.xlabel("Time (downsampled index)")
-    plt.ylabel("Binary (0 or 1)")
+    plt.title("Beat-based Binary Signal (0.5 sec resolution)")
+    plt.xlabel("Time (0.5 second bins)")
+    plt.ylabel("Beat Presence (0 or 1)")
     plt.grid(True)
+    plt.tight_layout()
     plt.show()
