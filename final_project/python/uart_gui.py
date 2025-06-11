@@ -28,7 +28,6 @@ class UARTReaderGUI:
         self.audio_path_entry = tk.Entry(root, width=40)
         self.audio_path_entry.grid(row=2, column=1)
         self.audio_path_entry.insert(0, "/home/soc/Desktop/music.mp3")
-
         self.connect_btn = tk.Button(root, text="Connect", command=self.connect)
         self.connect_btn.grid(row=3, column=0, pady=5)
         self.disconnect_btn = tk.Button(root, text="Disconnect", command=self.disconnect, state=tk.DISABLED)
@@ -103,39 +102,65 @@ class UARTReaderGUI:
                 self.output.see(tk.END)
             except Exception as e:
                 self.output.insert(tk.END, f"[Send Error] {e}\n")
+    ###遊戲畫面 圓圈出現總時長 （25-5）/2 ＝10 次 10*30 ＝ 300ms +200ms停留 剛好500ms(1拍)
+    
+    def animate_pulse_note(self):
+        x, y = 250, 50
+        radius = 5
+        note = self.canvas.create_oval(x - radius, y - radius, x + radius, y + radius, fill="red")
 
+        def expand():
+            nonlocal radius
+            if radius < 30:
+                radius += 2
+                self.canvas.coords(note, x - radius, y - radius, x + radius, y + radius)
+                self.root.after(30, expand)
+            else:
+                self.root.after(200, lambda: self.canvas.delete(note))  # 停留 50ms
+
+        expand()
+
+    ###
     def display_note(self, signal):
         if signal == "1":
-            if self.note is None:
-                self.note = self.canvas.create_oval(80, 30, 120, 70, fill="red")
-        elif signal == "0":
-            if self.note:
-                self.canvas.delete(self.note)
-                self.note = None
-        elif signal == "2":
-            self.score += 1
-            self.score_label.config(text=f"Score: {self.score}")
+            self.animate_pulse_note()
 
     def send_audio_binary(self):
         filepath = self.audio_path_entry.get().strip()
         try:
-            binary_data = audio_to_binary(filepath)
-           
+            binary_data = list(audio_to_binary(filepath))  # 確保是 list 可索引
+            shifted_data = binary_data[1:] + [0]  # 左移一格補0
+
             self.output.insert(tk.END, f"[Sending {len(binary_data)} bits]\n")
+            self.output.see(tk.END)
+
+            # 播音樂
             play_audio(filepath)
-            for bit in binary_data:
-                if not self.reading: break
-                self.serial_port.write(str(int(bit)).encode() + b'\n')
-                self.output.insert(tk.END, f"[TX]{bit}\n")
-                self.output.see(tk.END)
-                self.display_note(str(int(bit)))
-                time.sleep(0.5)
-            self.serial_port.write(b'D\n')  # 結尾時送 'D'
-            self.score = 0
-            self.score_label.config(text="Score: 0")
+
+            # 啟動顯示執行緒
+            threading.Thread(target=self.display_notes_thread, args=(shifted_data,), daemon=True).start()
+
+            # 啟動傳送執行緒
+            threading.Thread(target=self.send_uart_thread, args=(binary_data,), daemon=True).start()
+
         except Exception as e:
-           
             self.output.insert(tk.END, f"[Audio Error] {e}\n")
+
+    def send_uart_thread(self, binary_data):
+        for bit in binary_data:
+            if not self.reading:
+                break
+            self.serial_port.write(str(int(bit)).encode() + b'\n')
+            self.output.insert(tk.END, f"[TX]{bit}\n")
+            self.output.see(tk.END)
+            time.sleep(0.5)  # 準時傳送每拍
+
+    def display_notes_thread(self, shifted_data):
+        for bit in shifted_data:
+            if not self.reading:
+                break
+            self.display_note(str(int(bit)))  # 提早一拍顯示
+            time.sleep(0.5)  # 準時顯示每拍
 
 
 def play_audio(filepath):
