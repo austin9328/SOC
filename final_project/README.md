@@ -83,7 +83,8 @@ C111112153 呂騏佑
 
 ## 三、Design 
 - Architecture
-![螢幕擷取畫面 2025-06-05 171509](https://github.com/user-attachments/assets/f34d35f4-1d07-4bd0-baf5-3bf2f1b31231)
+![螢幕擷取畫面 2025-06-11 101246](https://github.com/user-attachments/assets/45367bbc-4961-406f-8584-3bf2243435d2)
+
 
   
 - API
