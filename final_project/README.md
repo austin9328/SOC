@@ -107,10 +107,10 @@ C111112153 呂騏佑
             - input 
                 - axi_clk
                 - axi_rst
-                - signal_in(siganl_(8)開始訊號、signal(9)結束訊號，來自slv_reg0)
+                - signal_in(31 downto 0)，對應 AXI slv_reg0(31 downto 0) 
                 - btn_hit
             - output
-                - signal_out(signal_out(3 downto 0)分數，傳給slv_reg1)
+                - signal_out(31 downto 0)，對應 AXI slv_reg1(31 downto 0)
                 - LED(7 downto 0)
             - method 
                 - 收到來自sdk傳送過來的開始訊號(signal_in(8))後進入hit狀態(開始玩遊戲)，對應slv_reg0
