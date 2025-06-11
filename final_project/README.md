@@ -85,6 +85,8 @@ C111112153 呂騏佑
 - Architecture
 ![螢幕擷取畫面 2025-06-11 101246](https://github.com/user-attachments/assets/45367bbc-4961-406f-8584-3bf2243435d2)
 
+- 流程圖
+![image](https://github.com/user-attachments/assets/20533507-453f-42b2-a37b-d672a18dd265)
 
   
 - API
