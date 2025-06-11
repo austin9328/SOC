@@ -93,28 +93,53 @@ C111112153 呂騏佑
         - input 
             - 樹莓派傳來的01訊號 (UART rx)
             - PL 傳來的得分訊號 (AXI Bus)
-            - 
         - output
             - 將遊戲開始訊號傳給PL (AXI Bus)
             - 將遊戲開始訊號傳給樹莓派 (UART tx)
             - 將得分訊號傳給樹莓派 (UART tx)
+        - method
+            - 傳送 'S' 字元到樹梅派通知樹莓派開始傳輸 0、1 訊號，也將slv_reg0(8)設為1通知板子轉成 hit 狀態(開始遊戲)
+            - 當從 slv_reg1 0收到的分數跟上一次不一樣後，傳輸給樹梅派目前分數，例如(p5、p12)
+            - 從樹莓派收到 0、1 訊號，將這些訊號寫入 slv_reg0(0)，讓板子收到目前 0、1訊號
+            - 收到樹莓派傳來的結束訊號後，將 slv_reg0(9)設為1，通知板子遊戲結束
     - PL
         - 遊戲 IP
             - input 
                 - axi_clk
                 - axi_rst
-                - start
+                - signal_in(siganl_(8)開始訊號、signal(9)結束訊號，來自slv_reg0)
                 - btn_hit
             - output
-                - 得分訊號(AXI Bus)
+                - signal_out(signal_out(3 downto 0)分數，傳給slv_reg1)
+                - LED(7 downto 0)
+            - method 
+                - 收到來自sdk傳送過來的開始訊號(signal_in(8))後進入hit狀態(開始玩遊戲)，對應slv_reg0
+                - 收到來自sdk傳送過來的結束訊號(signal_in(9))後回到initial狀態，對應 slv_reg0
+                - 將分數寫入 signal_out(3 downto 0) 對應 slv_reg1
+                - LED 顯示目前 0、1 訊號
 
-    - 樹莓派 
+ - 樹莓派 
+    - GUI
         - input 
             - 遊戲開始訊號 (UART rx)
             - 得分訊號 (UART rx)
         - output
             - 音頻訊號 (UART tx)
+        - method
+            - 透過tkinter 進行GUI設計
+            - pyserial 進行UART通訊
+                - 接收S訊號開始執行轉碼副程式(audio_to_binary.py)並傳送
+                - 01訊號結束時傳送D訊號表示結束
+            - 將解碼完成的uart訊號進行左移後進行繪製遊戲畫面
 
+    - 轉碼副程式(audio_to_binary.py)
+        
+        - input 
+            - 音樂檔案路徑
+        - output
+            - 01節奏訊號
+        - method
+            - 使用librosa 進行音樂檔案轉碼
 
 ## 四、coding 
 
