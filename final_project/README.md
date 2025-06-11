@@ -1,4 +1,4 @@
-# 乒乓球遊戲並由UART傳輸到樹莓派顯示分數
+# 音樂遊戲以FPGA做打擊
 #### 組員
 C111112131 詹逸宏  
 C111112153 呂騏佑
@@ -6,14 +6,16 @@ C111112153 呂騏佑
 
 ### 1.Functional Requirements
 
-- btn打擊
-- SDK啟動遊戲
-- 使用UART(PS)傳輸得分訊號
-- 樹莓派將音頻轉為01傳送到FPGA
-- 球的移動在LED顯示
-- 音樂由樹莓派輸出
-- 
-
+- 1. btn打擊
+- 2. SDK啟動遊戲
+- 3. 音樂結束樹莓派傳送結束訊號
+- 4. 使用UART(PS)傳輸得分訊號到樹莓派
+- 5. 樹莓派將節奏轉為01
+- 6. 將節奏訊號傳送到FPGA
+- 7. 打擊提示由GUI呈現
+- 8. 音樂由樹莓派輸出
+- 9. GUI顯示分數
+  
 ### 2.Interface Requirements
 - FPGA interface
     - internal
@@ -32,7 +34,6 @@ C111112153 呂騏佑
 - 延遲 100ms(暫定)
 
 ### 4.Limitation Requirements
-- 由於UART傳輸速率限制，遊戲的速度會受到影響
 - 需透過SDK傳送訊號才能開始遊戲
 - 只能由btn傳送打擊訊號
 - 無遊戲紀錄存檔功能
@@ -41,23 +42,32 @@ C111112153 呂騏佑
 ### 5.Verification Requirements
 
 - 樹莓派uart驗證 :
-    - UART通訊驗證
-        - 透過socat 驗證創建虛擬port做UART通訊驗證GUI是否可以收到UAER訊號
-        - 連接FPGA傳送UART訊號確定2者可以正確通訊
+    - UART通訊驗證 (驗證3、4、5、6、8點)
+        - 透過socat 驗證創建虛擬port做UART通訊驗證GUI是否可以收到UART訊號 (驗證GUI本身UART)
+        - 連接FPGA傳送UART訊號確定2者可以正確通訊 (驗證與FPGA的UART通訊)
     
-    - 音頻轉換驗證
-        - 將轉換完成的01訊號由matplotlib顯示
-    - GUI驗證
-        - 確定GUI收到訊號2時可以正確顯示分數
-        - 確定GUI收到訊號1時可以顯示打擊提示
+    - 音頻轉換驗證 (確定第5點的音頻轉換正確)
+        - 將轉換完成的01訊號由matplotlib顯示(確定轉碼成功，先不考慮正確性)
+        - 同時撥放音樂、01訊號(驗證節奏點正確性，在GUI完成)
 
-- IP驗證：
-    - 確定收到SDK傳送的start訊號後LED正常閃爍  
-    - 確定按下按鈕有傳送得分訊號到樹莓派
+    - GUI驗證 (驗證7、9)
+        - 確定GUI顯示的分數會根據收到的訊號改變 (驗證9點)
+        - 確定GUI可以顯示打擊提示 (驗證7點)
+
+- IP驗證(PL)：
+    - 遊戲IP (驗證1、2點)
+        - 確定收到S訊號後正確動作 
+        - 確定按下按鈕有傳送得分訊號
+      
+- SDK驗證(PS)：(驗證第1點)
+    - 確定送出S訊號FPGA、樹莓派有正確啟動
 
 - 整合驗證:  
-    - 透過SDK送出開始訊號，FPGA有收到樹莓派傳來的訊號
-    - GUI可以正確顯示分數，並在按下btn時顯示得分訊號
+    - 透過SDK送出開始訊號，FPGA、樹莓派有收到SDK傳來的訊號 (驗證第2點)
+    - 按下btn傳送的得分訊號在樹莓派正確顯示 (驗證1、3、4、9點)
+    - 接收到訊號後開始LED是否有閃爍 (驗證第5、6點)
+    - 接到開始訊號後，樹莓派傳送UART時音樂是否有撥放 (驗證第8點)
+    - 再送出UART訊號且UART訊號為1時 ，是否有顯示打擊提示 (驗證第7點)
 
 
 ## 二、System analysis (Breakdown)
@@ -75,10 +85,7 @@ C111112153 呂騏佑
 - Architecture
 ![螢幕擷取畫面 2025-06-05 171509](https://github.com/user-attachments/assets/f34d35f4-1d07-4bd0-baf5-3bf2f1b31231)
 
-
-
-
-
+  
 - API
  - FPGA
     - PS
@@ -93,12 +100,12 @@ C111112153 呂騏佑
     - PL
         - 遊戲 IP
             - input 
-                - clk
-                - rst
+                - axi_clk
+                - axi_rst
                 - start
-                - btn
+                - btn_hit
             - output
-                - 得分訊號
+                - 得分訊號(AXI Bus)
 
     - 樹莓派 
         - input 
