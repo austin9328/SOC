@@ -49,10 +49,11 @@ C111112153 呂騏佑
     - 音頻轉換驗證 (確定第5點的音頻轉換正確)
         - 將轉換完成的01訊號由matplotlib顯示(確定轉碼成功，先不考慮正確性)
         - 同時撥放音樂、01訊號(驗證節奏點正確性，在GUI完成)
-
+          
     - GUI驗證 (驗證7、9)
         - 確定GUI顯示的分數會根據收到的訊號改變 (驗證9點)
         - 確定GUI可以顯示打擊提示 (驗證7點)
+        - 以log檔紀錄TX訊號、節拍顯示 (節拍顯示會早TX訊號一拍 並用一拍的時間(500ms)完成遊戲畫面)
 
 - IP驗證(PL)：
     - 遊戲IP (驗證1、2點)
@@ -147,5 +148,41 @@ C111112153 呂騏佑
 ## 四、coding 
 
 ## 五、Verification
+- 已驗證
+    - 驗證項目1:
+        - 透過socat 驗證創建虛擬port做UART通訊驗證GUI是否可以收到UART訊號 (驗證GUI本身UART)
+        - 確定GUI顯示的分數會根據收到的訊號改變 (驗證9點)
+    - 驗證結果:
+        ![20250613_01h26m10s_grim](https://github.com/user-attachments/assets/18e9e08e-a69c-4a36-be4b-285e2822c5c3)
+        ![20250613_01h26m01s_grim](https://github.com/user-attachments/assets/76bd98cc-882f-415c-8bf3-7adf41283f65)
 
+    - 驗證項目2:
+        - 確定GUI可以顯示打擊提示 (驗證7點)
+    - 驗證結果:
+        連結:https://www.youtube.com/shorts/P42FxeFMTug
+          
+        
+  - 驗證項目3:
+    - 音頻轉換驗證 (確定第5點的音頻轉換正確)
+        - 將轉換完成的01訊號由matplotlib顯示(確定轉碼成功，先不考慮正確性)
+        - 以log檔紀錄TX訊號、節拍顯示 (節拍顯示會早TX訊號一拍 並用一拍的時間(500ms)完成遊戲畫面)
+    - 驗證結果:
+       - ![20250613_01h49m24s_grim](https://github.com/user-attachments/assets/22227179-c51d-4b75-8a14-aea529222368)
+       - 提早一拍顯示
+       - ![螢幕擷取畫面 2025-06-13 021245](https://github.com/user-attachments/assets/ab84695a-b2a6-4aee-8ec4-e3219722da54)
+       - https://github.com/austin9328/SOC/blob/main/final_project/python/log_011335.csv
+
+
+- 未取得驗證結果證明
+  
+- 確定收到S訊號後正確動作 
+- 確定按下按鈕有傳送得分訊號
+- 連接FPGA傳送UART訊號確定2者可以正確通訊 (驗證與FPGA的UART通訊)
+- 同時撥放音樂、01訊號(驗證節奏點正確性，在GUI完成)
+- 確定送出S訊號FPGA、樹莓派有正確啟動  
+- 透過SDK送出開始訊號，FPGA、樹莓派有收到SDK傳來的訊號 (驗證第2點)
+- 按下btn傳送的得分訊號在樹莓派正確顯示 (驗證1、3、4、9點)
+- 接收到訊號後開始LED是否有閃爍 (驗證第5、6點)
+- 接到開始訊號後，樹莓派傳送UART時音樂是否有撥放 (驗證第8點)
+- 再送出UART訊號且UART訊號為1時 ，是否有顯示打擊提示 (驗證第7點)
 
