@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date                      : Tue Jun 10 22:25:07 2025
+| Date                      : Mon Jun 16 21:07:56 2025
 | Host                      : LAPTOP-FFDNP4IP running 64-bit major release  (build 9200)
 | Command                   : report_io -file design_1_wrapper_io_placed.rpt
 | Design                    : design_1_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           142 |
+|           141 |
 +---------------+
 
 
@@ -426,7 +426,7 @@ Table of Contents
 | T15        |                   | High Range | VCCO_34                 | VCCO        |                   |      34 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | T16        |                   | High Range | IO_L21P_T3_DQS_34       | User IO     |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | T17        |                   | High Range | IO_L21N_T3_DQS_34       | User IO     |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| T18        | btn_start         | High Range | IO_L23N_T3_34           | INPUT       | LVCMOS33          |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| T18        |                   | High Range | IO_L23N_T3_34           | User IO     |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | T19        |                   | High Range | IO_L22N_T3_34           | User IO     |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | T20        |                   |            | GND                     | GND         |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | T21        | LED[1]            | High Range | IO_L1P_T0_33            | OUTPUT      | LVCMOS33          |      33 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |

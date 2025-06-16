@@ -11,4 +11,3 @@ set_property -dict {PACKAGE_PIN U19 IOSTANDARD LVCMOS33} [get_ports {LED[6]}]
 set_property -dict {PACKAGE_PIN U14 IOSTANDARD LVCMOS33} [get_ports {LED[7]}]
 
 set_property -dict {PACKAGE_PIN R16 IOSTANDARD LVCMOS33} [get_ports {btn_hit}]
-set_property -dict {PACKAGE_PIN T18 IOSTANDARD LVCMOS33} [get_ports {btn_start}]

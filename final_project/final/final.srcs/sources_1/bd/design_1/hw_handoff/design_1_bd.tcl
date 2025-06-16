@@ -162,7 +162,6 @@ proc create_root_design { parentCell } {
   # Create ports
   set LED [ create_bd_port -dir O -from 7 -to 0 LED ]
   set btn_hit [ create_bd_port -dir I btn_hit ]
-  set btn_start [ create_bd_port -dir I btn_start ]
   set rx [ create_bd_port -dir I rx ]
   set tx [ create_bd_port -dir O tx ]
 
@@ -513,7 +512,6 @@ proc create_root_design { parentCell } {
 
   # Create port connections
   connect_bd_net -net btn_hit_1 [get_bd_ports btn_hit] [get_bd_pins final_0/btn_hit]
-  connect_bd_net -net btn_start_1 [get_bd_ports btn_start] [get_bd_pins final_0/btn_start]
   connect_bd_net -net final_0_LED [get_bd_ports LED] [get_bd_pins final_0/LED]
   connect_bd_net -net final_0_irq [get_bd_pins final_0/irq] [get_bd_pins processing_system7_0/IRQ_F2P]
   connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins final_0/s00_axi_aresetn] [get_bd_pins final_0/s_axi_intr_aresetn] [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN]

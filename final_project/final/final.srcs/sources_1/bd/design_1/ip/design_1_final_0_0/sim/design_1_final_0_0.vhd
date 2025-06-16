@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:final:1.0
--- IP Revision: 25
+-- IP Revision: 26
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -57,7 +57,6 @@ ENTITY design_1_final_0_0 IS
   PORT (
     LED : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     btn_hit : IN STD_LOGIC;
-    btn_start : IN STD_LOGIC;
     s_axi_intr_awaddr : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
     s_axi_intr_awprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     s_axi_intr_awvalid : IN STD_LOGIC;
@@ -122,7 +121,6 @@ ARCHITECTURE design_1_final_0_0_arch OF design_1_final_0_0 IS
     PORT (
       LED : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
       btn_hit : IN STD_LOGIC;
-      btn_start : IN STD_LOGIC;
       s_axi_intr_awaddr : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
       s_axi_intr_awprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
       s_axi_intr_awvalid : IN STD_LOGIC;
@@ -238,7 +236,6 @@ BEGIN
     PORT MAP (
       LED => LED,
       btn_hit => btn_hit,
-      btn_start => btn_start,
       s_axi_intr_awaddr => s_axi_intr_awaddr,
       s_axi_intr_awprot => s_axi_intr_awprot,
       s_axi_intr_awvalid => s_axi_intr_awvalid,

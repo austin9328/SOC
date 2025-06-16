@@ -74,7 +74,7 @@ int main() {
                         // 等待
                     }
                     u32 slv_reg1 = Xil_In32(BASEADDR + SLV_REG1_OFFSET);
-                    u8 score = slv_reg1 & 0xF;
+                    u8 score = slv_reg1 & 0xFF;
                     if(score != prev_score){
                     	prev_score = score;
                     	 // 傳送分數
@@ -117,13 +117,13 @@ int main() {
                         }
 
                         XUartPs_SendByte(Uart0.Config.BaseAddress, dbg_send);
-                        xil_printf("Sent to Pi: %c (0x%02X)\n", dbg_send, dbg_send);
+                        xil_printf("Sent to Pi: %c\n", dbg_send);
                     }
 
                     // Pi → SDK
                     if (XUartPs_IsReceiveData(Uart0.Config.BaseAddress)) {
                         u8 dbg_recv = XUartPs_RecvByte(Uart0.Config.BaseAddress);
-                        xil_printf("Received from Pi: %c (0x%02X)\n", dbg_recv, dbg_recv);
+                        xil_printf("Received from Pi: %c\n", dbg_recv);
                     }
                 }
             }

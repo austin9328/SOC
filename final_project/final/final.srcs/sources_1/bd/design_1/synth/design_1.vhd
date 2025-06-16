@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Tue Jun 10 22:23:26 2025
+--Date        : Mon Jun 16 21:05:27 2025
 --Host        : LAPTOP-FFDNP4IP running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -1143,7 +1143,6 @@ entity design_1 is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     LED : out STD_LOGIC_VECTOR ( 7 downto 0 );
     btn_hit : in STD_LOGIC;
-    btn_start : in STD_LOGIC;
     rx : in STD_LOGIC;
     tx : out STD_LOGIC
   );
@@ -1246,7 +1245,6 @@ architecture STRUCTURE of design_1 is
   port (
     LED : out STD_LOGIC_VECTOR ( 7 downto 0 );
     btn_hit : in STD_LOGIC;
-    btn_start : in STD_LOGIC;
     s_axi_intr_awaddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_axi_intr_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_intr_awvalid : in STD_LOGIC;
@@ -1293,7 +1291,6 @@ architecture STRUCTURE of design_1 is
   );
   end component design_1_final_0_0;
   signal btn_hit_1 : STD_LOGIC;
-  signal btn_start_1 : STD_LOGIC;
   signal final_0_LED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal final_0_irq : STD_LOGIC;
   signal proc_sys_reset_0_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1433,14 +1430,12 @@ architecture STRUCTURE of design_1 is
 begin
   LED(7 downto 0) <= final_0_LED(7 downto 0);
   btn_hit_1 <= btn_hit;
-  btn_start_1 <= btn_start;
   rx_1 <= rx;
   tx <= processing_system7_0_UART0_TX;
 final_0: component design_1_final_0_0
      port map (
       LED(7 downto 0) => final_0_LED(7 downto 0),
       btn_hit => btn_hit_1,
-      btn_start => btn_start_1,
       irq => final_0_irq,
       s00_axi_aclk => processing_system7_0_FCLK_CLK0,
       s00_axi_araddr(3 downto 0) => ps7_0_axi_periph_M00_AXI_ARADDR(3 downto 0),
