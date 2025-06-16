@@ -196,7 +196,7 @@ class UARTReaderGUI:
 
             next_time = start_time + (i + 1) * 0.5
             time.sleep(max(0, next_time - time.time()))
-
+        self.serial_port.write(b'D\n')  # 結尾時送 'D'
         # 儲存為 CSV log 檔案
         log_filename = f"log_{datetime.now().strftime('%H%M%S')}.csv"
         with open(log_filename, "w", newline='') as csvfile:
@@ -215,5 +215,3 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = UARTReaderGUI(root)
     root.mainloop()
-
-
