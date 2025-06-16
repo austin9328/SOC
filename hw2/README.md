@@ -9,13 +9,6 @@
 </details>
 
 <details>
-  <summary>IRQ ID port</summary>
-  <p align="center">
-    <img src="https://github.com/user-attachments/assets/4ce49dc4-d054-4acf-8ba8-bedf5f8b850f" width="600">
-  </p>
-</details>
-
-<details>
   <summary>pending register</summary>
   <p align="center">
     <img src="https://github.com/user-attachments/assets/c2c63e09-3397-42b8-bd5b-843390a50250" width="600">
