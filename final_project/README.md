@@ -182,7 +182,7 @@ C111112153 呂騏佑
         - 按下btn正確計數，達到打擊效果 (驗證第1點)，當分數更新後，確定有傳送得分訊號至樹梅派(驗證第4點)
         - 遊戲結束後樹梅派傳送結束訊號(驗證第3點)
     - 驗證結果:
-      -連結:https://youtube.com/shorts/tNRco8quE7A?feature=share
+        - 連結 : https://youtube.com/shorts/tNRco8quE7A?feature=share
 
 
 - 未取得驗證結果證明
