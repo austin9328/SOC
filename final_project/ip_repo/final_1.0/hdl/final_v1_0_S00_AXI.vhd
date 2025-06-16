@@ -18,7 +18,6 @@ entity final_v1_0_S00_AXI is
 		-- Users to add ports here
 		LED       : out std_logic_vector(7 downto 0);
 		btn_hit   : in std_logic;
-		btn_start : in std_logic;
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
@@ -127,7 +126,6 @@ architecture arch_imp of final_v1_0_S00_AXI is
 			i_clk      : in std_logic;
 			i_rst      : in std_logic;
 			btn_hit    : in std_logic;
-			btn_start  : in std_logic;
 			signal_in  : in std_logic_vector(31 downto 0);
 			signal_out : out std_logic_vector(31 downto 0);
 			LED        : out std_logic_vector(7 downto 0)
@@ -405,7 +403,6 @@ begin
 			i_clk      => S_AXI_ACLK,
 			i_rst      => not S_AXI_ARESETN,
 			btn_hit    => btn_hit,
-			btn_start  => btn_start,
 			signal_in  => slv_reg0,
 			signal_out => i_siganl_out,
 			LED        => LED

@@ -37,7 +37,6 @@ entity final is
 	port(
 		i_clk      : in std_logic;
 		i_rst      : in std_logic;
-		btn_start  : in std_logic;
 		btn_hit    : in std_logic;
 		signal_in  : in std_logic_vector(31 downto 0);        --從樹梅派傳遞的資料
 		signal_out : out std_logic_vector(31 downto 0);--輸出資訊
@@ -49,7 +48,7 @@ architecture Behavioral of final is
 	type   state_type is (initial,hit);
 	signal state : state_type;
 	
-	signal score          : std_logic_vector(3 downto 0);
+	signal score          : std_logic_vector(7 downto 0);
 	signal div            : std_logic_vector(60 downto 0);
     signal e_clk          : std_logic;
 	
@@ -58,7 +57,7 @@ architecture Behavioral of final is
 	signal btn_hit_prev   : std_logic := '0';
 begin
 	
-	signal_out <= "0000000000000000000000000000"&score;
+	signal_out <= "000000000000000000000000"&score;
 	LED <= i_LED;
 	
 	fsm : process(i_clk,i_rst)
@@ -101,13 +100,13 @@ begin
 	process(i_clk,i_rst,btn_hit) --score
 	begin
 		if i_rst = '1' then
-			score <= "0000";
+			score <= "00000000";
 			btn_hit_prev <= '0';
 		elsif rising_edge(i_clk) then
 			btn_hit_prev <= btn_hit; -- 更新上一拍的值
 			case state is
 				when initial => 
-					score <= "0000";
+					score <= "00000000";
 				when hit =>
 					if signal_in(0) = '1' and btn_hit = '1' and btn_hit_prev = '0' then
 						score <= score + '1';
