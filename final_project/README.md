@@ -90,6 +90,9 @@ C111112153 呂騏佑
 - 流程圖
 ![image](https://github.com/user-attachments/assets/20533507-453f-42b2-a37b-d672a18dd265)
 
+- Block Design
+![image](https://github.com/austin9328/SOC/blob/main/final_project/final/block%20design.png)
+
   
 - API
  - FPGA
@@ -145,8 +148,13 @@ C111112153 呂騏佑
         - method
             - 使用librosa 進行音樂檔案轉碼
 
-## 四、coding 
-
+## 四、coding
+- [final.vhd](https://github.com/austin9328/SOC/blob/main/final_project/ip_repo/final_1.0/hdl/final.vhd)  
+- [final_v1_0_S00_AXI.vhd](https://github.com/austin9328/SOC/blob/main/final_project/ip_repo/final_1.0/hdl/final_v1_0_S00_AXI.vhd)  
+- [final_v1_0.vhd](https://github.com/austin9328/SOC/blob/main/final_project/ip_repo/final_1.0/hdl/final_v1_0.vhd)  
+- [main.c](https://github.com/austin9328/SOC/blob/main/final_project/final/final.sdk/fianl/src/helloworld.c)
+- [audio_to_binary.py](https://github.com/austin9328/SOC/blob/main/final_project/python/audio_to_binary.py)
+- [uart_gui.py](https://github.com/austin9328/SOC/blob/main/final_project/python/uart_gui.py)
 ## 五、Verification
 - 已驗證
     - 驗證項目1:
