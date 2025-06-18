@@ -149,12 +149,15 @@ C111112153 呂騏佑
             - 將上傳的音訊檔案使用librosa轉換成 0、1
 
 ## 四、coding
-- RTL_code : [final.vhd](https://github.com/austin9328/SOC/blob/main/final_project/ip_repo/final_1.0/hdl/final.vhd)  
-- S00_AXI : [final_v1_0_S00_AXI.vhd](https://github.com/austin9328/SOC/blob/main/final_project/ip_repo/final_1.0/hdl/final_v1_0_S00_AXI.vhd)  
-- Top_wrapper : [final_v1_0.vhd](https://github.com/austin9328/SOC/blob/main/final_project/ip_repo/final_1.0/hdl/final_v1_0.vhd)  
-- SDK : [main.c](https://github.com/austin9328/SOC/blob/main/final_project/final/final.sdk/fianl/src/helloworld.c)
-- 轉碼副程式 : [audio_to_binary.py](https://github.com/austin9328/SOC/blob/main/final_project/python/audio_to_binary.py)
-- GUI遊戲介面 : [uart_gui.py](https://github.com/austin9328/SOC/blob/main/final_project/python/uart_gui.py)
+|code|link|
+|:-----|:-----|
+|RTL_code|[final.vhd](https://github.com/austin9328/SOC/blob/main/final_project/ip_repo/final_1.0/hdl/final.vhd)|
+|S00_AXI|[final_v1_0_S00_AXI.vhd](https://github.com/austin9328/SOC/blob/main/final_project/ip_repo/final_1.0/hdl/final_v1_0_S00_AXI.vhd)|
+|Top_wrapper|[final_v1_0.vhd](https://github.com/austin9328/SOC/blob/main/final_project/ip_repo/final_1.0/hdl/final_v1_0.vhd)|
+|SDK|[main.c](https://github.com/austin9328/SOC/blob/main/final_project/final/final.sdk/fianl/src/helloworld.c)|
+|轉碼副程式|[audio_to_binary.py](https://github.com/austin9328/SOC/blob/main/final_project/python/audio_to_binary.py)|
+|GUI遊戲介面|[uart_gui.py](https://github.com/austin9328/SOC/blob/main/final_project/python/uart_gui.py)|
+
 ## 五、Verification
 - 已驗證
     - 驗證項目1:
