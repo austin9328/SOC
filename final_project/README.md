@@ -146,7 +146,7 @@ C111112153 呂騏佑
         - output
             - 01節奏訊號
         - method
-            - 使用librosa 進行音樂檔案轉碼
+            - 將上傳的音訊檔案使用librosa轉換成 0、1
 
 ## 四、coding
 - [final.vhd](https://github.com/austin9328/SOC/blob/main/final_project/ip_repo/final_1.0/hdl/final.vhd)  
